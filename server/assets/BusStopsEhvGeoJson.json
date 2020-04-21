@@ -1,0 +1,4094 @@
+{
+  "elements": [
+    {
+      "type": "node",
+      "id": 25294742,
+      "lat": 51.4458744,
+      "lon": 5.4922979,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "TU/e ingang De Wielen",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 42626361,
+      "lat": 51.4385251,
+      "lon": 5.5028829,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rembrandtplein",
+        "public_transport": "platform",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 42680873,
+      "lat": 51.4579693,
+      "lon": 5.4828277,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Coenderslaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64050750",
+        "shelter": "no",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 42684862,
+      "lat": 51.4595162,
+      "lon": 5.4881632,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Cassandraplein",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "AND",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 42686184,
+      "lat": 51.4601436,
+      "lon": 5.4827294,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Drosserstraat",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 42697260,
+      "lat": 51.4639739,
+      "lon": 5.482425,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Hardenbergpad",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64050790",
+        "shelter": "no",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 238240421,
+      "lat": 51.4263967,
+      "lon": 5.4936067,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "St. Servaasweg",
+        "public_transport": "platform",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 243997387,
+      "lat": 51.4444823,
+      "lon": 5.5213299,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "65151221",
+        "cxx:id": "38531",
+        "highway": "bus_stop",
+        "name": "Broekakkerseweg",
+        "operator": "Hermes",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 243999428,
+      "lat": 51.4381596,
+      "lon": 5.5078979,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hercules Segherslaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 291806226,
+      "lat": 51.4640403,
+      "lon": 5.4886849,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Coriolanuspad",
+        "public_transport": "platform",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 611029236,
+      "lat": 51.4421973,
+      "lon": 5.5001266,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kievitlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 611114670,
+      "lat": 51.4374457,
+      "lon": 5.4912958,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "DAF Museum",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64005890",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 611114675,
+      "lat": 51.4373151,
+      "lon": 5.4907919,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "DAF Museum",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64005900",
+        "shelter": "no",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776508,
+      "lat": 51.4554468,
+      "lon": 5.4709106,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kloosterdreef",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776519,
+      "lat": 51.4480219,
+      "lon": 5.4773519,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64000900",
+        "cxx:id": "37739",
+        "highway": "bus_stop",
+        "name": "Gildelaan",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776524,
+      "lat": 51.4474099,
+      "lon": 5.4770688,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001130",
+        "cxx:id": "37745",
+        "highway": "bus_stop",
+        "name": "Gildelaan",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776550,
+      "lat": 51.4394419,
+      "lon": 5.4955357,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rubensstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776554,
+      "lat": 51.4390102,
+      "lon": 5.4973824,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rubensstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776581,
+      "lat": 51.4392946,
+      "lon": 5.518979,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Cronjestraat",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776586,
+      "lat": 51.4410677,
+      "lon": 5.5225877,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Heerbaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776602,
+      "lat": 51.4610946,
+      "lon": 5.4699214,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Joris Minnestraat",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619776606,
+      "lat": 51.4643872,
+      "lon": 5.4708931,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Catharina Ziekenhuis Zuid",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619813887,
+      "lat": 51.4506795,
+      "lon": 5.4836827,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "TU Eindhoven",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619813896,
+      "lat": 51.4508349,
+      "lon": 5.4831382,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "TU Eindhoven",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619863399,
+      "lat": 51.4419567,
+      "lon": 5.48196,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stationsweg",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619863400,
+      "lat": 51.4421363,
+      "lon": 5.5003999,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kievitlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930337,
+      "lat": 51.4078934,
+      "lon": 5.4810628,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hotel Eindhoven",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930341,
+      "lat": 51.4130532,
+      "lon": 5.4821876,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontys Theo Koomenlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930344,
+      "lat": 51.4133742,
+      "lon": 5.4823995,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontys Theo Koomenlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930360,
+      "lat": 51.4350634,
+      "lon": 5.4796771,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stadhuisplein",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64005260",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930364,
+      "lat": 51.4352549,
+      "lon": 5.479706,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stadhuisplein",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64005250",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930371,
+      "lat": 51.4371848,
+      "lon": 5.4770853,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Keizersgracht",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930382,
+      "lat": 51.4295799,
+      "lon": 5.4861902,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "name": "Parktheater",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64001301",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930384,
+      "lat": 51.4319423,
+      "lon": 5.4850601,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "P.C. Hooftlaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930386,
+      "lat": 51.4323469,
+      "lon": 5.4842235,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "P.C. Hooftlaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930387,
+      "lat": 51.4303383,
+      "lon": 5.4859958,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Parktheater",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64001291",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930389,
+      "lat": 51.426174,
+      "lon": 5.4894023,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Heistraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64005510",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930390,
+      "lat": 51.4264925,
+      "lon": 5.4890213,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Heistraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64005520",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619930409,
+      "lat": 51.440042,
+      "lon": 5.4752192,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "cxx:code": "64000430",
+        "cxx:id": "37729",
+        "highway": "bus_stop",
+        "name": "Witte Dame",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956655,
+      "lat": 51.4451814,
+      "lon": 5.4709545,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001400",
+        "cxx:id": "37754",
+        "highway": "bus_stop",
+        "name": "Zernikestraat",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956657,
+      "lat": 51.457197,
+      "lon": 5.4592186,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Minckelersplein",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956659,
+      "lat": 51.4564048,
+      "lon": 5.4597805,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Minckelersplein",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956661,
+      "lat": 51.4505087,
+      "lon": 5.4655887,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gemmastraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6410"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956663,
+      "lat": 51.4539136,
+      "lon": 5.4622247,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wattstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956665,
+      "lat": 51.4540415,
+      "lon": 5.4623443,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wattstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956667,
+      "lat": 51.4498203,
+      "lon": 5.4665773,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gemmastraat",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "zone": "6410"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956688,
+      "lat": 51.4452242,
+      "lon": 5.4712179,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001330",
+        "cxx:id": "37751",
+        "highway": "bus_stop",
+        "name": "Zernikestraat",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956690,
+      "lat": 51.460293,
+      "lon": 5.4561593,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Philips Nederland",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619956692,
+      "lat": 51.4600492,
+      "lon": 5.4561045,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Philips Nederland",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619997926,
+      "lat": 51.4345334,
+      "lon": 5.4841755,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bilderdijklaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64000030",
+        "shelter": "no",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 619997934,
+      "lat": 51.4244272,
+      "lon": 5.5064736,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Tivolilaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620049748,
+      "lat": 51.4242257,
+      "lon": 5.4976642,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thomas à Kempislaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65100320",
+        "shelter": "yes",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620049749,
+      "lat": 51.4219926,
+      "lon": 5.5013096,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lavendelstraat",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620049750,
+      "lat": 51.4187368,
+      "lon": 5.5064587,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hertensprong",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620049753,
+      "lat": 51.4215308,
+      "lon": 5.5151442,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Diepmeerven",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620049755,
+      "lat": 51.4183659,
+      "lon": 5.5151994,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bunderkensven",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620049756,
+      "lat": 51.4211493,
+      "lon": 5.5154015,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Diepmeerven",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620057225,
+      "lat": 51.4419674,
+      "lon": 5.4692134,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Philips-stadion",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620057229,
+      "lat": 51.4414612,
+      "lon": 5.4704804,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Philips-stadion",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620064825,
+      "lat": 51.4203428,
+      "lon": 5.4469745,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gagelbosch",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620064827,
+      "lat": 51.4267032,
+      "lon": 5.4574353,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Donizettilaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64111390",
+        "shelter": "yes",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620064830,
+      "lat": 51.4300656,
+      "lon": 5.4619549,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Solmsweg",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64000510",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620064831,
+      "lat": 51.4297809,
+      "lon": 5.4620719,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Solmsweg",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64000160",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620064832,
+      "lat": 51.4329456,
+      "lon": 5.4653846,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mecklenburgstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620064833,
+      "lat": 51.4335324,
+      "lon": 5.4675864,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mecklenburgstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620064834,
+      "lat": 51.4355361,
+      "lon": 5.4746714,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grote Berg",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64000450",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620072920,
+      "lat": 51.4238665,
+      "lon": 5.4532276,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grieglaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620103889,
+      "lat": 51.4374781,
+      "lon": 5.4560207,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hastelweg",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620103890,
+      "lat": 51.4373029,
+      "lon": 5.4556492,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hastelweg",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620103891,
+      "lat": 51.4362378,
+      "lon": 5.4613611,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jozef Eliasweg",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620103892,
+      "lat": 51.4361463,
+      "lon": 5.4620495,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jozef Eliasweg",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620103894,
+      "lat": 51.4383834,
+      "lon": 5.4587496,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Willem de Rijkelaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64006440",
+        "shelter": "no",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620114988,
+      "lat": 51.4166441,
+      "lon": 5.464826,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Locatellistraat/Professor Holstlaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620114990,
+      "lat": 51.4169885,
+      "lon": 5.4664996,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Locatellistraat/Professor Holstlaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620114993,
+      "lat": 51.4172092,
+      "lon": 5.4731868,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Genneper Parken",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620114997,
+      "lat": 51.4168778,
+      "lon": 5.4715219,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Genneper Parken",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134980,
+      "lat": 51.4155361,
+      "lon": 5.4450941,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lichtenberg",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134981,
+      "lat": 51.4173115,
+      "lon": 5.4459056,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Roffart",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64116030",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134982,
+      "lat": 51.4178846,
+      "lon": 5.4458629,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Roffart",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64116040",
+        "shelter": "yes",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134983,
+      "lat": 51.4195607,
+      "lon": 5.4447191,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kastelenplein (Oost)",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134984,
+      "lat": 51.4197409,
+      "lon": 5.4497556,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Palestrinastraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134985,
+      "lat": 51.4197045,
+      "lon": 5.4533155,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Verdistraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64113090",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134986,
+      "lat": 51.4200907,
+      "lon": 5.4577005,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Reinkenstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64113070",
+        "shelter": "yes",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134987,
+      "lat": 51.4191338,
+      "lon": 5.4620895,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nicolaistraat",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134988,
+      "lat": 51.4221682,
+      "lon": 5.4644748,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sibeliuslaan",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134989,
+      "lat": 51.4239517,
+      "lon": 5.4663057,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bayeuxlaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64113020",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134990,
+      "lat": 51.4233993,
+      "lon": 5.4668423,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bayeuxlaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64113010",
+        "shelter": "yes",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134991,
+      "lat": 51.4268967,
+      "lon": 5.4690656,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Camphuysenstraat",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134992,
+      "lat": 51.430868,
+      "lon": 5.4718946,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rivierstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64006150",
+        "shelter": "no",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620134993,
+      "lat": 51.4329483,
+      "lon": 5.4722106,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Heilig Hartkerk",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620153534,
+      "lat": 51.4084838,
+      "lon": 5.4520081,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "HTC/Vijver",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620153535,
+      "lat": 51.4133846,
+      "lon": 5.4538829,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "HTC/Dommeldal",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620734155,
+      "lat": 51.4314968,
+      "lon": 5.5021286,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Otto Veniusweg",
+        "public_transport": "platform",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620784881,
+      "lat": 51.4317379,
+      "lon": 5.4959637,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sint Jozephburch",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 620784882,
+      "lat": 51.4316457,
+      "lon": 5.496783,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sint Jozephburch",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621793888,
+      "lat": 51.4641986,
+      "lon": 5.459194,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Suyslaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621793890,
+      "lat": 51.4644299,
+      "lon": 5.4593151,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Suyslaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621907367,
+      "lat": 51.4185263,
+      "lon": 5.4840397,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kortonjo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621907368,
+      "lat": 51.4182084,
+      "lon": 5.4838621,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kortonjo",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621907371,
+      "lat": 51.423062,
+      "lon": 5.4852256,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Boutenslaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621907372,
+      "lat": 51.424731,
+      "lon": 5.4859515,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Boutenslaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621907373,
+      "lat": 51.4262856,
+      "lon": 5.4862755,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Looiakkerstraat",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 621907374,
+      "lat": 51.4281502,
+      "lon": 5.4869354,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Looiakkerstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 622129558,
+      "lat": 51.4152552,
+      "lon": 5.4978307,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Floraplein",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64121890",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 622129559,
+      "lat": 51.4154454,
+      "lon": 5.4981078,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Floraplein",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64121900",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1470193088,
+      "lat": 51.4246729,
+      "lon": 5.5363849,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Schaarland",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65110270",
+        "shelter": "yes",
+        "zone": "6511"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1631231579,
+      "lat": 51.428903,
+      "lon": 5.5188075,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "DAF 2",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171427,
+      "lat": 51.4211131,
+      "lon": 5.4423869,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64110040",
+        "cxx:id": "38014",
+        "highway": "bus_stop",
+        "name": "Akerendam",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171428,
+      "lat": 51.421178,
+      "lon": 5.4425774,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64110630",
+        "cxx:id": "38050",
+        "highway": "bus_stop",
+        "name": "Akerendam",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171441,
+      "lat": 51.4268774,
+      "lon": 5.458197,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Donizettilaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64111400",
+        "shelter": "yes",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171458,
+      "lat": 51.4196444,
+      "lon": 5.4463336,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "cxx:code": "64111520",
+        "cxx:id": "38098",
+        "highway": "bus_stop",
+        "name": "Gagelbosch",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171466,
+      "lat": 51.4452594,
+      "lon": 5.4621389,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001875",
+        "cxx:id": "55801",
+        "highway": "bus_stop",
+        "name": "Glaspoort",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171468,
+      "lat": 51.4238328,
+      "lon": 5.4537457,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64111480",
+        "cxx:id": "38094",
+        "highway": "bus_stop",
+        "name": "Grieglaan",
+        "public_transport": "platform",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171470,
+      "lat": 51.4204218,
+      "lon": 5.5037365,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kalmoesplein",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171478,
+      "lat": 51.4480484,
+      "lon": 5.4446782,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64111240",
+        "cxx:id": "38084",
+        "highway": "bus_stop",
+        "name": "Koenraadlaan",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171479,
+      "lat": 51.4306092,
+      "lon": 5.4514435,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64111810",
+        "cxx:id": "38109",
+        "highway": "bus_stop",
+        "name": "Lodewijkstraat",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171480,
+      "lat": 51.4302323,
+      "lon": 5.4513874,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64111820",
+        "cxx:id": "38110",
+        "highway": "bus_stop",
+        "name": "Lodewijkstraat",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171485,
+      "lat": 51.4229975,
+      "lon": 5.5104243,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "65100450",
+        "cxx:id": "38467",
+        "highway": "bus_stop",
+        "name": "Meerbergsven",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171493,
+      "lat": 51.4237451,
+      "lon": 5.5362109,
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "cxx:code": "65110180",
+        "cxx:id": "38474",
+        "highway": "bus_stop",
+        "name": "Schaarland",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65110180",
+        "shelter": "yes",
+        "zone": "6511"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171516,
+      "lat": 51.4437291,
+      "lon": 5.4788349,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64000010",
+        "cxx:id": "37687",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "B",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171556,
+      "lat": 51.4384109,
+      "lon": 5.4752404,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "cxx:code": "64005230",
+        "cxx:id": "37788",
+        "highway": "bus_stop",
+        "name": "Vrijstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1714171582,
+      "lat": 51.4171592,
+      "lon": 5.4785262,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "cxx:code": "64121135",
+        "cxx:id": "55052",
+        "highway": "bus_stop",
+        "name": "Zwemcentrum Tongelreep",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732760057,
+      "lat": 51.4277016,
+      "lon": 5.5089545,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jan van Eyckgracht",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732760073,
+      "lat": 51.4309013,
+      "lon": 5.5045382,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Otto Veniusweg",
+        "public_transport": "platform",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802633,
+      "lat": 51.4390591,
+      "lon": 5.4484766,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64115110",
+        "cxx:id": "38160",
+        "highway": "bus_stop",
+        "name": "Botenlaan",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802677,
+      "lat": 51.4356209,
+      "lon": 5.4753681,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grote Berg",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64000220",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802682,
+      "lat": 51.4146593,
+      "lon": 5.461224,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64121299",
+        "cxx:id": "47288",
+        "highway": "bus_stop",
+        "name": "HTC/Berkenbos",
+        "public_transport": "platform",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802695,
+      "lat": 51.4121848,
+      "lon": 5.4632585,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64121210",
+        "cxx:id": "38219",
+        "highway": "bus_stop",
+        "name": "HTC/The Strip",
+        "public_transport": "platform",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802701,
+      "lat": 51.4124431,
+      "lon": 5.4638897,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64121400",
+        "cxx:id": "38225",
+        "highway": "bus_stop",
+        "name": "HTC/The Strip",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802748,
+      "lat": 51.4195911,
+      "lon": 5.4402315,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64116700",
+        "cxx:id": "38172",
+        "highway": "bus_stop",
+        "name": "Kastelenplein",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802777,
+      "lat": 51.4155599,
+      "lon": 5.4451033,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64116060",
+        "cxx:id": "38164",
+        "highway": "bus_stop",
+        "name": "Lichtenberg",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802808,
+      "lat": 51.4390268,
+      "lon": 5.4405471,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64115070",
+        "cxx:id": "38158",
+        "highway": "bus_stop",
+        "name": "St Theresiaplein",
+        "public_transport": "platform",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802817,
+      "lat": 51.4280913,
+      "lon": 5.4578975,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64110580",
+        "cxx:id": "49837",
+        "highway": "bus_stop",
+        "name": "Strausslaan",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732802828,
+      "lat": 51.4383762,
+      "lon": 5.4447293,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64115090",
+        "cxx:id": "38159",
+        "highway": "bus_stop",
+        "name": "Zeelsterstraat",
+        "public_transport": "platform",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732833033,
+      "lat": 51.4452226,
+      "lon": 5.4509083,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001780",
+        "cxx:id": "37760",
+        "highway": "bus_stop",
+        "name": "Cederlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732833034,
+      "lat": 51.4452642,
+      "lon": 5.4506201,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001932",
+        "cxx:id": "37770",
+        "highway": "bus_stop",
+        "name": "Cederlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732833052,
+      "lat": 51.4474734,
+      "lon": 5.5203257,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "cxx:code": "65151230",
+        "cxx:id": "38532",
+        "highway": "bus_stop",
+        "name": "Hageheldlaan",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "CXX",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732833063,
+      "lat": 51.4440641,
+      "lon": 5.4588516,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001809",
+        "cxx:id": "56419",
+        "highway": "bus_stop",
+        "name": "Kastanjelaan",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732833074,
+      "lat": 51.4475674,
+      "lon": 5.516939,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "65151300",
+        "cxx:id": "38537",
+        "highway": "bus_stop",
+        "name": "Merckthoef",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732833076,
+      "lat": 51.4484043,
+      "lon": 5.5177812,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "65151290",
+        "cxx:id": "38536",
+        "highway": "bus_stop",
+        "name": "Merckthoef",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732833079,
+      "lat": 51.4393008,
+      "lon": 5.5169401,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "65151090",
+        "cxx:id": "38524",
+        "highway": "bus_stop",
+        "name": "Molijnstraat",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732853051,
+      "lat": 51.4635438,
+      "lon": 5.4883968,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Coriolanuspad",
+        "public_transport": "platform",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732853056,
+      "lat": 51.4579047,
+      "lon": 5.4826966,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Coenderslaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64050760",
+        "shelter": "no",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732944312,
+      "lat": 51.4560092,
+      "lon": 5.4712186,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kloosterdreef",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1732944335,
+      "lat": 51.4536541,
+      "lon": 5.4708883,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sint Petruskerk",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64050420",
+        "shelter": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1885044386,
+      "lat": 51.4436321,
+      "lon": 5.4779741,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "M",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1969214041,
+      "lat": 51.4437054,
+      "lon": 5.4786805,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "D",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1969225488,
+      "lat": 51.4419223,
+      "lon": 5.4755262,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001882",
+        "cxx:id": "37768",
+        "highway": "bus_stop",
+        "name": "Piazza",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1969225525,
+      "lat": 51.4412349,
+      "lon": 5.4748861,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001810",
+        "cxx:id": "37762",
+        "highway": "bus_stop",
+        "name": "Piazza",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1969225550,
+      "lat": 51.44345,
+      "lon": 5.4429786,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64111761",
+        "cxx:id": "38108",
+        "highway": "bus_stop",
+        "name": "Evoluon",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1969225552,
+      "lat": 51.4471927,
+      "lon": 5.4581713,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001915",
+        "cxx:id": "55802",
+        "highway": "bus_stop",
+        "name": "Strijp S",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1969225592,
+      "lat": 51.4436397,
+      "lon": 5.4432804,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64111951",
+        "cxx:id": "38115",
+        "highway": "bus_stop",
+        "name": "Evoluon",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1969225604,
+      "lat": 51.4470462,
+      "lon": 5.457895,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001915",
+        "cxx:id": "55802",
+        "highway": "bus_stop",
+        "name": "Strijp S",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2427948122,
+      "lat": 51.4389765,
+      "lon": 5.5167522,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Molijnstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2428034908,
+      "lat": 51.442546,
+      "lon": 5.4589828,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Frederiklaan",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2428051511,
+      "lat": 51.4293952,
+      "lon": 5.4446537,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ergon/De Hurk",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2428203868,
+      "lat": 51.4282894,
+      "lon": 5.4457833,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Beemdstraat/Hurksestraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64111790",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2428203872,
+      "lat": 51.4281698,
+      "lon": 5.4461205,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Beemdstraat/Hurksestraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64111800",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2558308729,
+      "lat": 51.4286005,
+      "lon": 5.5200238,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "DAF 2",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2683688921,
+      "lat": 51.4607501,
+      "lon": 5.4700653,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Joris Minnestraat",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701071010,
+      "lat": 51.4442109,
+      "lon": 5.4791401,
+      "tags": {
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Centraal Station",
+        "note": "uitstaphalte",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64000023",
+        "shelter": "no",
+        "source": "http://data.ndovloket.nl/haltes/",
+        "tactile_paving": "yes",
+        "timetable": "no",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085912,
+      "lat": 51.4437193,
+      "lon": 5.4787669,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "C",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085915,
+      "lat": 51.4436949,
+      "lon": 5.4786051,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "E",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085917,
+      "lat": 51.4436825,
+      "lon": 5.4785257,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "F",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085918,
+      "lat": 51.4436699,
+      "lon": 5.4784493,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "G",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085920,
+      "lat": 51.4436515,
+      "lon": 5.4780465,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "L",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085923,
+      "lat": 51.4436336,
+      "lon": 5.4781285,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "K",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085926,
+      "lat": 51.4436593,
+      "lon": 5.4783659,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "H",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085929,
+      "lat": 51.4436474,
+      "lon": 5.478286,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "I",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2701085932,
+      "lat": 51.4436429,
+      "lon": 5.4782093,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "public_transport": "platform",
+        "ref": "J",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2804266331,
+      "lat": 51.4300608,
+      "lon": 5.4892801,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wilgenhof",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64001270",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2804266332,
+      "lat": 51.4300531,
+      "lon": 5.4890745,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wilgenhof",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64001480",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3270179696,
+      "lat": 51.4204302,
+      "lon": 5.5039449,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kalmoesplein",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3716136949,
+      "lat": 51.4355998,
+      "lon": 5.514344,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Quinten Matsyslaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3885850656,
+      "lat": 51.4284399,
+      "lon": 5.4975427,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sint Jansweg",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3885850758,
+      "lat": 51.4285717,
+      "lon": 5.4974448,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sint Jansweg",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3885869237,
+      "lat": 51.4257597,
+      "lon": 5.5025289,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Roothaanstraat",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3885869238,
+      "lat": 51.4260096,
+      "lon": 5.5019046,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Roothaanstraat",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3938096864,
+      "lat": 51.4566272,
+      "lon": 5.4771831,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64050040",
+        "cxx:id": "37831",
+        "highway": "bus_stop",
+        "name": "Europalaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3938096875,
+      "lat": 51.457723,
+      "lon": 5.4770965,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64050030",
+        "cxx:id": "37830",
+        "highway": "bus_stop",
+        "name": "Europalaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3938096883,
+      "lat": 51.4601812,
+      "lon": 5.4764216,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64050060",
+        "cxx:id": "37833",
+        "highway": "bus_stop",
+        "name": "Generaal Pattonlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3938096892,
+      "lat": 51.4612049,
+      "lon": 5.4763547,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64050050",
+        "cxx:id": "37832",
+        "highway": "bus_stop",
+        "name": "Generaal Pattonlaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4425893260,
+      "lat": 51.4390435,
+      "lon": 5.5135748,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "President Steynstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65151040",
+        "shelter": "yes",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530247195,
+      "lat": 51.444733,
+      "lon": 5.463539,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64001820",
+        "cxx:id": "37763",
+        "highway": "bus_stop",
+        "name": "Glaspoort",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530283526,
+      "lat": 51.4558691,
+      "lon": 5.4896469,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Peppelrode",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530283527,
+      "lat": 51.4564771,
+      "lon": 5.4897977,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Peppelrode",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530283528,
+      "lat": 51.4542696,
+      "lon": 5.4896099,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "MMC Eindhoven",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530283529,
+      "lat": 51.4540402,
+      "lon": 5.4894859,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "MMC Eindhoven",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530337651,
+      "lat": 51.4293546,
+      "lon": 5.444262,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ergon/De Hurk",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530356043,
+      "lat": 51.4382549,
+      "lon": 5.458786,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Willem de Rijkelaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64006430",
+        "shelter": "no",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530356047,
+      "lat": 51.4388547,
+      "lon": 5.4660688,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gagelstraat",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530356048,
+      "lat": 51.4386323,
+      "lon": 5.4650228,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gagelstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530356049,
+      "lat": 51.4384948,
+      "lon": 5.4718688,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wilhelminaplein",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530356050,
+      "lat": 51.4384129,
+      "lon": 5.4718956,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wilhelminaplein",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704419,
+      "lat": 51.4228885,
+      "lon": 5.4936549,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Varenstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64121010",
+        "shelter": "no",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704421,
+      "lat": 51.4231018,
+      "lon": 5.493671,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Varenstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64121020",
+        "shelter": "no",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704422,
+      "lat": 51.4182419,
+      "lon": 5.4962709,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Pioenroosstraat",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704423,
+      "lat": 51.4185723,
+      "lon": 5.4963119,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Pioenroosstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704424,
+      "lat": 51.4195015,
+      "lon": 5.4921408,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Winkelstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64121060",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704425,
+      "lat": 51.4163108,
+      "lon": 5.4915615,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kortonjolaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704427,
+      "lat": 51.4205762,
+      "lon": 5.4952527,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Korianderstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64121030",
+        "shelter": "no",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4530704428,
+      "lat": 51.4205464,
+      "lon": 5.4954929,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Korianderstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64121040",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4531988838,
+      "lat": 51.4513897,
+      "lon": 5.5173187,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Citroenvlinderlaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4531988839,
+      "lat": 51.4480134,
+      "lon": 5.5201761,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hageheldlaan",
+        "public_transport": "platform",
+        "shelter": "no",
+        "source": "AND",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4531988840,
+      "lat": 51.4517923,
+      "lon": 5.5211904,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Pagelaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4532769884,
+      "lat": 51.4515091,
+      "lon": 5.4779969,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontys Rachelsmolen",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4532769886,
+      "lat": 51.4506615,
+      "lon": 5.4777101,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontys Rachelsmolen",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550771915,
+      "lat": 51.4532905,
+      "lon": 5.4525855,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Strijp-T",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550771918,
+      "lat": 51.4530799,
+      "lon": 5.4526955,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Strijp-T",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550894789,
+      "lat": 51.4384035,
+      "lon": 5.444565,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zeelsterstraat",
+        "public_transport": "platform",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550894793,
+      "lat": 51.4391452,
+      "lon": 5.4406228,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "St Theresiaplein",
+        "public_transport": "platform",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550954168,
+      "lat": 51.4170547,
+      "lon": 5.4787395,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zwemcentrum Tongelreep",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6412"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4552970462,
+      "lat": 51.4335468,
+      "lon": 5.4888803,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Geldropseweg",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64000860",
+        "shelter": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333637,
+      "lat": 51.4451469,
+      "lon": 5.5210596,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Broekakkerseweg",
+        "operator": "Hermes",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333638,
+      "lat": 51.440898,
+      "lon": 5.5226092,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Heerbaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333639,
+      "lat": 51.4393765,
+      "lon": 5.518523,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Cronjestraat",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333640,
+      "lat": 51.439029,
+      "lon": 5.5136847,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "President Steynstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65151030",
+        "shelter": "no",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333641,
+      "lat": 51.438159,
+      "lon": 5.508657,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hercules Segherslaan",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333642,
+      "lat": 51.438702,
+      "lon": 5.5013878,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rembrandtplein",
+        "public_transport": "platform",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333643,
+      "lat": 51.4372476,
+      "lon": 5.4862716,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Havenhoofd",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333644,
+      "lat": 51.4374152,
+      "lon": 5.4860982,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Havenhoofd",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333645,
+      "lat": 51.4638139,
+      "lon": 5.4884247,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Coriolanuspad",
+        "public_transport": "platform",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333646,
+      "lat": 51.4598868,
+      "lon": 5.4880236,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Cassandraplein",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "AND",
+        "tactile_paving": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333647,
+      "lat": 51.46,
+      "lon": 5.4826096,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Drosserstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583333648,
+      "lat": 51.4637545,
+      "lon": 5.4822702,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Hardenbergpad",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64050800",
+        "shelter": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643612,
+      "lat": 51.4157311,
+      "lon": 5.4404748,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Oldengaarde",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64116080",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643613,
+      "lat": 51.4148628,
+      "lon": 5.4448139,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lichtenberg",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643622,
+      "lat": 51.4198523,
+      "lon": 5.4489998,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Palestrinastraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643623,
+      "lat": 51.4197839,
+      "lon": 5.4532324,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Verdistraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64113100",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643624,
+      "lat": 51.4201743,
+      "lon": 5.4575798,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Reinkenstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64113080",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643625,
+      "lat": 51.4193086,
+      "lon": 5.4617221,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nicolaistraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643626,
+      "lat": 51.4222426,
+      "lon": 5.4643785,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sibeliuslaan",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643627,
+      "lat": 51.4269155,
+      "lon": 5.4688819,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Camphuysenstraat",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643628,
+      "lat": 51.4304549,
+      "lon": 5.4716035,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rivierstraat",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64006160",
+        "shelter": "no",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643629,
+      "lat": 51.4328914,
+      "lon": 5.4721167,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Heilig Hartkerk",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643630,
+      "lat": 51.4184361,
+      "lon": 5.5153724,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bunderkensven",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643631,
+      "lat": 51.4172276,
+      "lon": 5.5109377,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kanunnikensven",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643632,
+      "lat": 51.4172192,
+      "lon": 5.5092265,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kanunnikensven",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643633,
+      "lat": 51.4186924,
+      "lon": 5.5063527,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hertensprong",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643634,
+      "lat": 51.4222744,
+      "lon": 5.5011634,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lavendelstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643635,
+      "lat": 51.4239788,
+      "lon": 5.4979582,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thomas à Kempislaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65100310",
+        "shelter": "no",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643636,
+      "lat": 51.426492,
+      "lon": 5.4932208,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "St. Servaasweg",
+        "public_transport": "platform",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643690,
+      "lat": 51.4434831,
+      "lon": 5.4401673,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gezondheidscentrum Strijp",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643693,
+      "lat": 51.4391302,
+      "lon": 5.4484135,
+      "tags": {
+        "bus": "yes",
+        "cxx:code": "64115110",
+        "cxx:id": "38160",
+        "highway": "bus_stop",
+        "name": "Botenlaan",
+        "public_transport": "platform",
+        "source": "CXX",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4583643695,
+      "lat": 51.4426564,
+      "lon": 5.4588966,
+      "tags": {
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Frederiklaan",
+        "public_transport": "platform",
+        "shelter": "no",
+        "zone": "6411"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4591263439,
+      "lat": 51.4271559,
+      "lon": 5.5304207,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "DAF 3",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65100220",
+        "shelter": "yes",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4591263440,
+      "lat": 51.4267648,
+      "lon": 5.5316103,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "DAF 3",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65100210",
+        "shelter": "yes",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4591263588,
+      "lat": 51.4252203,
+      "lon": 5.5419597,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Papenvoort",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65110630"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4591264289,
+      "lat": 51.4254361,
+      "lon": 5.5415227,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Papenvoort",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65110640"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4594537713,
+      "lat": 51.4291092,
+      "lon": 5.5097971,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jan van Eyckgracht",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4594537714,
+      "lat": 51.4244874,
+      "lon": 5.5067235,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Tivolilaan",
+        "public_transport": "platform",
+        "zone": "6510"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5097403191,
+      "lat": 51.4455781,
+      "lon": 5.4810056,
+      "tags": {
+        "bus": "yes",
+        "bus_routes": "Flixbus 080, 268, 280, 822, 831, 833, 1924, N80, N81, N93, N116, N367, N831",
+        "highway": "bus_stop",
+        "name": "JF Kennedylaan/Limbopad",
+        "note": "bushalte voor internationale bussen",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5358741981,
+      "lat": 51.4540759,
+      "lon": 5.5205526,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Koudenhoven",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65150910",
+        "shelter": "yes",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5358741982,
+      "lat": 51.4538419,
+      "lon": 5.5207826,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Koudenhoven",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65150920",
+        "shelter": "yes",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427192425,
+      "lat": 51.4417873,
+      "lon": 5.4819779,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stationsweg",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427192427,
+      "lat": 51.4432255,
+      "lon": 5.5120254,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Bothastraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427192428,
+      "lat": 51.4431064,
+      "lon": 5.5119824,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Generaal Bothastraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427192432,
+      "lat": 51.4450749,
+      "lon": 5.5139364,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Locomotiefstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427192433,
+      "lat": 51.4454268,
+      "lon": 5.5140477,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Locomotiefstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427192436,
+      "lat": 51.4518533,
+      "lon": 5.5210168,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Pagelaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427192438,
+      "lat": 51.451478,
+      "lon": 5.5175447,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Citroenvlinderlaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427217620,
+      "lat": 51.4417359,
+      "lon": 5.507888,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Poeijersstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427218122,
+      "lat": 51.4416427,
+      "lon": 5.5063766,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Poeijersstraat",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427218127,
+      "lat": 51.4419361,
+      "lon": 5.4952428,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Uiverlaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427218128,
+      "lat": 51.4418291,
+      "lon": 5.4956987,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Uiverlaan",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427218131,
+      "lat": 51.4416778,
+      "lon": 5.488548,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dommelhoef",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5427218132,
+      "lat": 51.4415859,
+      "lon": 5.4882033,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dommelhoef",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5490689026,
+      "lat": 51.4535414,
+      "lon": 5.4710361,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sint Petruskerk",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:64050410",
+        "shelter": "yes",
+        "zone": "6405"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6123645485,
+      "lat": 51.4647747,
+      "lon": 5.5417059,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Meierijlaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65252160"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6123645486,
+      "lat": 51.4647923,
+      "lon": 5.5418829,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Meierijlaan",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65252150"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6124402100,
+      "lat": 51.4462769,
+      "lon": 5.4980561,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hermes-remise",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6124402102,
+      "lat": 51.4515027,
+      "lon": 5.5135137,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Van Oldenbarneveltlaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6124402103,
+      "lat": 51.4513487,
+      "lon": 5.5119913,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Van Oldenbarneveltlaan",
+        "public_transport": "platform",
+        "zone": "6515"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6124402104,
+      "lat": 51.4563841,
+      "lon": 5.5433047,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Eeneind",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65251340",
+        "zone": "6525"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6124402106,
+      "lat": 51.457619,
+      "lon": 5.5427859,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Eeneind",
+        "public_transport": "platform",
+        "ref:IFOPT": "NL:Q:65251330",
+        "zone": "6525"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6191322729,
+      "lat": 51.458132,
+      "lon": 5.4709966,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Van Logterenpad",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6191322732,
+      "lat": 51.4579345,
+      "lon": 5.4709231,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Van Logterenpad",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7076666320,
+      "lat": 51.4408798,
+      "lon": 5.4792664,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "cxx:code": "64001150",
+        "cxx:id": "37746",
+        "highway": "bus_stop",
+        "name": "Dommelstraat",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7076666321,
+      "lat": 51.4409016,
+      "lon": 5.4789938,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "cxx:code": "64001150",
+        "cxx:id": "37746",
+        "highway": "bus_stop",
+        "name": "18 Septemberplein",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "source": "CXX",
+        "zone": "6400"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7157794497,
+      "lat": 51.4495135,
+      "lon": 5.51665,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Koudenhovenseweg Zuid",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7219206557,
+      "lat": 51.444476,
+      "lon": 5.4793668,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Centraal Station",
+        "note": "uitstaphalte",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes"
+      }
+    }
+  ]
+}
