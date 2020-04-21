@@ -2,9 +2,33 @@
 <html>
   <% include ../partials/head.ejs %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <% include ../partials/scripts.ejs %>
+    <h1>wiki-game</h1>
+    <section>
+      <form action="/new" method="GET" id="form-new-game">
+        <fieldset>
+          <legend>Start a new game</legend>
+          <input
+            type="text"
+            id="room-name"
+            placeholder="room name"
+            name="room"
+          />
+          <input type="submit" value="let's go!" />
+        </fieldset>
+      </form>
+      <form action="/join" method="GET" id="form-join-game">
+        <fieldset>
+          <legend>Join an existing game</legend>
+          <input
+            type="text"
+            id="existing-room-name"
+            placeholder="room name"
+            name="room"
+          />
+          <input type="submit" value="let's go!" />
+        </fieldset>
+      </form>
+    </section>
+    <script src="/javascripts/validation.js"></script>
   </body>
 </html>
