@@ -20,7 +20,7 @@ function socket(io) {
             availableRooms[roomIndex].userTotal++
 
             socket.join(roomName)
-            io.to(roomName).emit('new user', userName)
+            io.to(roomName).emit('new user', userName, Utilities.getRoomData(roomName, availableRooms))
 
             console.log(userName, 'joined', roomName)
             console.log('room details', io.sockets.adapter.rooms[roomName])    
@@ -33,10 +33,15 @@ function socket(io) {
                         const index = room.users.indexOf(user)
                         room.users.splice(index, 1)
                         room.userTotal--
+                        if (room.userTotal < 1) {
+                            const index = availableRooms.indexOf(room)
+                            availableRooms.splice(index, 1)
+                        }
                     }
                 })
             })
             console.log('user disconnected', socket.id)
+            console.log(availableRooms)
             
         })
         socket.on('wiki link clicked', link => {

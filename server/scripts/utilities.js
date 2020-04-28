@@ -31,6 +31,10 @@ const Utilities = {
         newRoom.destinationLinks = await Utilities.getRandomWikiLinks(1)
         newRoom.startLinks = await Utilities.getRandomWikiLinks(1)
         return newRoom
+    },
+    getRoomData: function(roomName, roomsFile) {
+        const roomIndex = roomsFile.findIndex(room => room.roomName === roomName)
+        return roomsFile[roomIndex]
     }
 }
 
