@@ -7,12 +7,14 @@ function socket(io) {
         console.log('a user connected')
 
         socket.on('join', async function(roomName, userName) {
+            let isCreator = false
             if (!io.sockets.adapter.rooms[roomName]) {
                 const newRoom = await Utilities.createRoom(roomName)
                 availableRooms.push(newRoom)
+                isCreator = true
             }
 
-            const newUser = await Utilities.createUser(userName, socket.id)
+            const newUser = await Utilities.createUser(userName, socket.id, isCreator)
             const roomIndex = availableRooms.findIndex(room => room.roomName === roomName)
             availableRooms[roomIndex].users.push(newUser)
             availableRooms[roomIndex].userTotal++
@@ -22,7 +24,6 @@ function socket(io) {
 
             console.log(userName, 'joined', roomName)
             console.log('room details', io.sockets.adapter.rooms[roomName])    
-            console.log(availableRooms)
         })
 
         socket.on('disconnect', function() {
@@ -36,7 +37,6 @@ function socket(io) {
                 })
             })
             console.log('user disconnected', socket.id)
-            console.log(availableRooms)
             
         })
         socket.on('wiki link clicked', link => {

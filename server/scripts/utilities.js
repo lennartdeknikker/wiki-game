@@ -1,12 +1,13 @@
 const fetch = require('node-fetch')
 
 const Utilities = {
-    createUser: function(username, id) {
+    createUser: function(username, id, isAdmin) {
         return {
             username: username,
             id: id,
             score: 0,
-            clicks: 0
+            clicks: 0,
+            admin: isAdmin
         }
     },
     getRandomWikiLinks: async function (amount = 3) {
