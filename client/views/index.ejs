@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <% include ../partials/head.ejs %>
+  <% include ./partials/head.ejs %>
   <body>
     <h1>wiki-game</h1>
     <section>
       <form action="/new" method="GET" id="form-new-game">
         <fieldset>
           <legend>Start a new game</legend>
+          <input
+            type="text"
+            id="user-name"
+            placeholder="your name"
+            name="user"
+          />
           <input
             type="text"
             id="room-name"
