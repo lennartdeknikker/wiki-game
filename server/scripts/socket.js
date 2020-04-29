@@ -7,6 +7,7 @@ function socket(io) {
         console.log('a user connected')
 
         socket.on('join', async function(roomName, userName) {
+            console.log('user joined')            
             let isCreator = false
             if (!io.sockets.adapter.rooms[roomName]) {
                 const newRoom = await Utilities.createRoom(roomName)
@@ -27,14 +28,20 @@ function socket(io) {
         })
 
         socket.on('disconnect', function() {
+            console.log('user disconnected')            
             availableRooms.forEach(room => {
                 room.users.forEach(user => {
                     if (user.id === socket.id) {
-                        if (user.admin === true) room.users[1].admin = true
+                        // if admin, assign new admin
+                        if (user.admin === true && room.users.length > 1) room.users[1].admin = true
                         const index = room.users.indexOf(user)
+                        // remove user from array
                         room.users.splice(index, 1)
-                        room.userTotal--                        
+                        // update user total
+                        room.userTotal--
+                        // tell clients the users file changed          
                         io.to(room.roomName).emit('change in users', Utilities.getRoomData(room.roomName, availableRooms))
+                        // delete room if empty
                         if (room.userTotal < 1) {
                             const index = availableRooms.indexOf(room)
                             availableRooms.splice(index, 1)
@@ -42,20 +49,23 @@ function socket(io) {
                     }
                 })
             })
-            console.log('user disconnected', socket.id)
-            console.log(availableRooms)
         })
 
         socket.on('ready', (ready) => {
+            console.log('ready')            
             Utilities.setUserProperty(socket.id, availableRooms, 'ready', ready, io)            
         })
 
-        socket.on('start game', () => {
-            
+        socket.on('start game', async () => {
+            console.log('start game')            
+            const room = Utilities.getRoomByUserId(socket.id, availableRooms)
+            room.startLink = await Utilities.getRandomWikiLinks(1)
+            room.destinationLink = await Utilities.getRandomWikiLinks(1)
+            io.to(room.roomName).emit('game started', room)
         })
 
         socket.on('wiki link clicked', link => {
-            console.log(link)
+            console.log('wiki link clicked', link)
         })
 
     })

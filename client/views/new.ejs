@@ -5,18 +5,23 @@
     <header>
       <h1><%= room %></h1>
       <h2 id="username"><%= user %></h2>
+      <button id="ready-button">not ready</button>
     </header>
 
-    <button id="ready-button">not ready</button>
+    <section>
+      <h3>Other players</h3>
+      <ul id="user-list"></ul>
 
-    <h3>Other players</h3>
-    <ul id="user-list"></ul>
+      <button id="start-button" class="inactive" data-ready="false">
+        Start game
+      </button>
+    </section>
 
-    <button id="start-button" class="inactive" data-ready="false">
-      Start game
-    </button>
+    <section>
+      <article id="wiki-embed"></article>
+    </section>
 
-    <% include ./partials/socket-scripts.ejs %>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="javascripts/new.js"></script>
   </body>
 </html>

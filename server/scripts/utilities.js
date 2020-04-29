@@ -25,24 +25,35 @@ const Utilities = {
             roomName: roomName,
             userTotal: 0,
             users: [],
-            startLinks: [],
-            destinationLinks: []
+            startLink: '',
+            destinationLink: ''
         }
 
-        newRoom.destinationLinks = await Utilities.getRandomWikiLinks(1)
-        newRoom.startLinks = await Utilities.getRandomWikiLinks(1)
+        // newRoom.destinationLinks = await Utilities.getRandomWikiLinks(1)
+        // newRoom.startLinks = await Utilities.getRandomWikiLinks(1)
         return newRoom
     },
     getRoomData(roomName, roomsFile) {
         const roomIndex = roomsFile.findIndex(room => room.roomName === roomName)
         return roomsFile[roomIndex]
     },
-    setUserProperty(id, roomsToSearch, property, newValue, io) {
-        roomsToSearch.forEach(room => {
+    getRoomByUserId(id, roomsFile) {
+        let index = -1
+        roomsFile.forEach(room => {
+            room.users.forEach(user => {
+                if (user.id === id) {
+                    index = room
+                }
+            })
+        })
+        return index
+    },
+    setUserProperty(id, roomsFile, property, newValue, io) {
+        roomsFile.forEach(room => {
             room.users.forEach(user => {
                 if (user.id === id) {
                     user[property] = newValue                    
-                    io.to(room.roomName).emit('change in users', Utilities.getRoomData(room.roomName, roomsToSearch))
+                    io.to(room.roomName).emit('change in users', Utilities.getRoomData(room.roomName, roomsFile))
                 }
             })
         })

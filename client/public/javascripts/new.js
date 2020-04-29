@@ -1,14 +1,26 @@
+// initialize socket
+
+// eslint-disable-next-line no-undef
+const socket = io()
+
+const urlParams = new URLSearchParams(window.location.search)
+const roomName = urlParams.get('room')
+const userName = urlParams.get('user')
+
+socket.emit('join', roomName, userName)
+
 // page elements
 const readyButton = document.getElementById('ready-button')
 const userList = document.getElementById('user-list')
 const userNameElement = document.getElementById('username')
 const startButton = document.getElementById('start-button')
+const wikiEmbed = document.querySelector('#wiki-embed')
 
 // event listeners
 readyButton.addEventListener('click', readyButtonHandler)
 startButton.addEventListener('click', startButtonHandler)
 
-//handlers
+//event handlers
 function readyButtonHandler() {
     if (readyButton.innerText === 'not ready') {
         socket.emit('ready', true)
@@ -20,7 +32,11 @@ function readyButtonHandler() {
 }
 
 function startButtonHandler() {
-    if (startButton.dataset.ready === true) socket.emit('start game')    
+    if (startButton.dataset.ready) {
+        socket.emit('start game')    
+        console.log('start game')
+        
+    }
 }
 
 
@@ -32,7 +48,7 @@ socket.on('change in users', (roomData) => {
     updateUserList(roomData.users)
 
     if (admin) startButton.classList.remove('hidden')
-    
+
     if (!admin) startButton.classList.add('hidden')
     else if (everyoneReady(roomData.users)) {
         startButton.dataset.ready = true
@@ -41,6 +57,10 @@ socket.on('change in users', (roomData) => {
         startButton.dataset.ready = false
         startButton.classList.add('inactive')
     }
+})
+
+socket.on('game started', (roomData) => {
+    console.log(roomData.startLink)    
 })
 
 // DOM update functions
@@ -76,3 +96,17 @@ function isAdmin(users) {
     
     return admin.id === socket.id
 }
+
+
+
+// if (wikiEmbed) {
+//     const links = wikiEmbed.querySelectorAll('a')
+//     links.forEach(link => {
+//         link.addEventListener('click', onWikiLink)
+//     })
+// }
+
+// function onWikiLink() {
+//     event.preventDefault()
+//     socket.emit('wiki link clicked', this.href)
+// }
