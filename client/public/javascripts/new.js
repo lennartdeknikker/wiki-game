@@ -5,7 +5,11 @@ const userNameElement = document.getElementById('username')
 const startButton = document.getElementById('start-button')
 
 // event listeners
-readyButton.addEventListener('click', () => {
+readyButton.addEventListener('click', readyButtonHandler)
+startButton.addEventListener('click', startButtonHandler)
+
+//handlers
+function readyButtonHandler() {
     if (readyButton.innerText === 'not ready') {
         socket.emit('ready', true)
         readyButton.innerText = 'ready'
@@ -13,19 +17,23 @@ readyButton.addEventListener('click', () => {
         socket.emit('ready', false)
         readyButton.innerText = 'not ready'
     }
-})
+}
 
-startButton.addEventListener('click', () => {
-    if (startButton.dataset.ready === true) socket.emit('start game')
-})
+function startButtonHandler() {
+    if (startButton.dataset.ready === true) socket.emit('start game')    
+}
 
 
 // socket events
 socket.on('change in users', (roomData) => {
     console.log('change in users')
+    const admin = isAdmin(roomData.users)
     
     updateUserList(roomData.users)
-    if (!isAdmin(roomData.users)) startButton.classList.add('hidden')
+
+    if (admin) startButton.classList.remove('hidden')
+    
+    if (!admin) startButton.classList.add('hidden')
     else if (everyoneReady(roomData.users)) {
         startButton.dataset.ready = true
         startButton.classList.remove('inactive')
@@ -35,6 +43,7 @@ socket.on('change in users', (roomData) => {
     }
 })
 
+// DOM update functions
 function updateUserList(users) {
     userList.innerHTML = ''
     for (let user of users) {
@@ -51,6 +60,7 @@ function updateUserList(users) {
     }
 }
 
+// checker functions
 function everyoneReady(users) {
     let everyoneReady = true
     for (let user of users) {

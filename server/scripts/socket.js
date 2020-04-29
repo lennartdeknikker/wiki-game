@@ -30,6 +30,7 @@ function socket(io) {
             availableRooms.forEach(room => {
                 room.users.forEach(user => {
                     if (user.id === socket.id) {
+                        if (user.admin === true) room.users[1].admin = true
                         const index = room.users.indexOf(user)
                         room.users.splice(index, 1)
                         room.userTotal--                        
@@ -47,6 +48,10 @@ function socket(io) {
 
         socket.on('ready', (ready) => {
             Utilities.setUserProperty(socket.id, availableRooms, 'ready', ready, io)            
+        })
+
+        socket.on('start game', () => {
+            
         })
 
         socket.on('wiki link clicked', link => {
