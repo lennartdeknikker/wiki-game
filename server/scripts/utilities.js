@@ -5,7 +5,7 @@ const Utilities = {
         return {
             username: username,
             id: id,
-            score: 0,
+            finished: false,
             clicks: 0,
             admin: isAdmin,
             ready: false

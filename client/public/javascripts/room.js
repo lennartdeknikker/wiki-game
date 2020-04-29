@@ -18,6 +18,7 @@ const wikiDestinationEmbed = document.getElementById('wiki-destination-embed')
 const wikiEmbed = document.getElementById('wiki-embed')
 const clicksCounter = document.getElementById('clicks')
 const pagesList = document.getElementById('pages')
+const playersProgressList = document.getElementById('players-progress-list')
 
 // variables
 let clicks = 0
@@ -69,6 +70,17 @@ socket.on('change in users', (roomData) => {
 socket.on('game started', async (roomData) => {
     addDestination(roomData.destinationLink[0])
     loadPage(roomData.startLink[0])
+})
+
+socket.on('a user clicked', roomData => {
+    playersProgressList.innerHTML = ''
+    roomData.users.sort((a, b) => a.clicks - b.clicks)
+    for (let user in roomData.users) {
+        const newLi = document.createElement('li')
+        let finishedText = roomData.users[user].finished === true ? '(finished)' : '(not finished yet)'
+        newLi.innerText = `${roomData.users[user].username}: ${roomData.users[user].clicks} clicks ${finishedText}`
+        playersProgressList.appendChild(newLi)
+    }    
 })
 
 

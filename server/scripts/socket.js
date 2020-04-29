@@ -67,6 +67,9 @@ function socket(io) {
         socket.on('wiki link clicked', link => {
             console.log('wiki link clicked', link)
             Utilities.setUserProperty(socket.id, availableRooms, 'clicks', 'increment', io)
+            
+            const room = Utilities.getRoomByUserId(socket.id, availableRooms)
+            io.to(room.roomName).emit('a user clicked', room)
         })
 
     })
