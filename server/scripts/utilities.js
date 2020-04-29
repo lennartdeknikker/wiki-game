@@ -38,15 +38,15 @@ const Utilities = {
         return roomsFile[roomIndex]
     },
     getRoomByUserId(id, roomsFile) {
-        let index = -1
+        let result = -1
         roomsFile.forEach(room => {
             room.users.forEach(user => {
                 if (user.id === id) {
-                    index = room
+                    result = room
                 }
             })
         })
-        return index
+        return result
     },
     setUserProperty(id, roomsFile, property, newValue, io) {
         roomsFile.forEach(room => {
@@ -57,6 +57,14 @@ const Utilities = {
                 }
             })
         })
+    },
+    checkIfEveryoneIsFinished(id, roomsFile) {
+        let everyoneFinished = true
+        const room = Utilities.getRoomByUserId(id, roomsFile)         
+        room.users.forEach(user => {
+            if (user.finished === false) everyoneFinished = false
+        })
+        return everyoneFinished
     }
 }
 

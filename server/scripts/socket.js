@@ -66,9 +66,17 @@ function socket(io) {
 
         socket.on('wiki link clicked', link => {
             console.log('wiki link clicked', link)
-            Utilities.setUserProperty(socket.id, availableRooms, 'clicks', 'increment', io)
-            
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
+            const destinationSubject = room.destinationLink[0].replace('https://en.wikipedia.org/api/rest_v1/page/summary/', '')
+            const clickedSubject = link.replace('http://en.wikipedia.org/wiki/', '')
+            if (clickedSubject === destinationSubject) {
+                Utilities.setUserProperty(socket.id, availableRooms, 'finished', true, io)
+                if (Utilities.checkIfEveryoneIsFinished(socket.id, availableRooms)) {
+                    // here what happens when te game ends.
+                }
+            }
+            
+            Utilities.setUserProperty(socket.id, availableRooms, 'clicks', 'increment', io)            
             io.to(room.roomName).emit('a user clicked', room)
         })
 

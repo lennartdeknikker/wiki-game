@@ -68,6 +68,12 @@ socket.on('change in users', (roomData) => {
 })
 
 socket.on('game started', async (roomData) => {
+    let userNameText = userNameElement.innerText.replace('(ready)', '')
+    userNameElement.innerText = userNameText
+
+    const sections = document.querySelectorAll('section')
+    sections[0].classList.add('hidden')
+    sections[1].classList.add('hidden')
     addDestination(roomData.destinationLink[0])
     loadPage(roomData.startLink[0])
 })
@@ -145,6 +151,7 @@ function updateLinks(elementName) {
         increaseClicks()
         addToPageArray(this.href)
         loadPage(parseToApiLink(this.href))
+        
         socket.emit('wiki link clicked', this.href)
     }
 
