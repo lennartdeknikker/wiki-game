@@ -2,8 +2,21 @@
 <html>
   <% include ./partials/head.ejs %>
   <body>
-    <h1><%= title %></h1>
-    <%= room %> <% include ./partials/socket-scripts.ejs %>
-    <script src="javascripts/get-new-article.js"></script>
+    <header>
+      <h1><%= room %></h1>
+      <h2 id="username"><%= user %></h2>
+    </header>
+
+    <button id="ready-button">not ready</button>
+
+    <h3>Other players</h3>
+    <ul id="user-list"></ul>
+
+    <button id="start-button" class="inactive" data-ready="false">
+      Start game
+    </button>
+
+    <% include ./partials/socket-scripts.ejs %>
+    <script src="javascripts/new.js"></script>
   </body>
 </html>

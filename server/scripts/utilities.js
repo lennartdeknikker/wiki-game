@@ -1,16 +1,17 @@
 const fetch = require('node-fetch')
 
 const Utilities = {
-    createUser: function(username, id, isAdmin) {
+    createUser(username, id, isAdmin) {
         return {
             username: username,
             id: id,
             score: 0,
             clicks: 0,
-            admin: isAdmin
+            admin: isAdmin,
+            ready: false
         }
     },
-    getRandomWikiLinks: async function (amount = 3) {
+    async getRandomWikiLinks(amount = 3) {
         let links = []
         for (let i = 0; i < amount; i++) {
             const response = await fetch('https://en.wikipedia.org/api/rest_v1/page/random/summary')
@@ -19,7 +20,7 @@ const Utilities = {
         }
         return links
     },
-    createRoom: async function(roomName) {
+    async createRoom(roomName) {
         let newRoom = {
             roomName: roomName,
             userTotal: 0,
@@ -32,9 +33,19 @@ const Utilities = {
         newRoom.startLinks = await Utilities.getRandomWikiLinks(1)
         return newRoom
     },
-    getRoomData: function(roomName, roomsFile) {
+    getRoomData(roomName, roomsFile) {
         const roomIndex = roomsFile.findIndex(room => room.roomName === roomName)
         return roomsFile[roomIndex]
+    },
+    setUserProperty(id, roomsToSearch, property, newValue, io) {
+        roomsToSearch.forEach(room => {
+            room.users.forEach(user => {
+                if (user.id === id) {
+                    user[property] = newValue                    
+                    io.to(room.roomName).emit('change in users', Utilities.getRoomData(room.roomName, roomsToSearch))
+                }
+            })
+        })
     }
 }
 

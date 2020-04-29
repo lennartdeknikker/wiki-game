@@ -9,11 +9,6 @@ const userName = urlParams.get('user')
 
 socket.emit('join', roomName, userName)
 
-socket.on('new user', (username, roomData) => {
-    console.log(username, 'joined the room')    
-    console.log(roomData) 
-})
-
 if (wikiEmbed) {
     const links = wikiEmbed.querySelectorAll('a')
     links.forEach(link => {
