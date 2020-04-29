@@ -52,7 +52,7 @@ const Utilities = {
         roomsFile.forEach(room => {
             room.users.forEach(user => {
                 if (user.id === id) {
-                    user[property] = newValue                    
+                    newValue === 'increment' ? user[property] = user[property] + 1 : user[property] = newValue                    
                     io.to(room.roomName).emit('change in users', Utilities.getRoomData(room.roomName, roomsFile))
                 }
             })

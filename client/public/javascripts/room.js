@@ -17,11 +17,11 @@ const startButton = document.getElementById('start-button')
 const wikiDestinationEmbed = document.getElementById('wiki-destination-embed')
 const wikiEmbed = document.getElementById('wiki-embed')
 const clicksCounter = document.getElementById('clicks')
-const pagesElement = document.getElementById('pages')
+const pagesList = document.getElementById('pages')
 
 // variables
 let clicks = 0
-let clickedLinks = []
+let clickedLinksArray = []
 
 // event listeners
 readyButton.addEventListener('click', readyButtonHandler)
@@ -173,10 +173,38 @@ function increaseClicks() {
 
 function addToPageArray(link) {
     const subject = link.replace('http://en.wikipedia.org/wiki/', '')
-    clickedLinks.push(subject)
-    let breadCrumbs = ''
-    for (link in clickedLinks) {
-        breadCrumbs += `${clickedLinks[link]} >`
+    const newItem = {
+        subject: subject,
+        link: link,
     }
-    pagesElement.innerText = breadCrumbs
+
+    clickedLinksArray.push(newItem)
+    
+    const index = clickedLinksArray.length - 1
+    const newLi = document.createElement('li')
+    newLi.innerText = newItem.subject
+    newLi.addEventListener('click', () => revertPageTo(index))
+    pagesList.appendChild(newLi)
+
+    function revertPageTo(index) {
+        
+        const link = parseToApiLink(clickedLinksArray[index].link) 
+        loadPage(link)
+        console.log(clickedLinksArray)
+        
+        clickedLinksArray = clickedLinksArray.slice(0, index + 1)
+        console.log(clickedLinksArray)
+        reloadPageArray()
+    }
+
+    function reloadPageArray() {
+        pagesList.innerHTML = ''
+        for (let link in clickedLinksArray) {       
+            console.log(clickedLinksArray[link].subject)                 
+            const newLi = document.createElement('li')
+            newLi.innerText = clickedLinksArray[link].subject
+            newLi.addEventListener('click', () => revertPageTo(link))
+            pagesList.appendChild(newLi)
+        }
+    }
 }
