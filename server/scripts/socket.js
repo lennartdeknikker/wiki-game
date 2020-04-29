@@ -59,8 +59,8 @@ function socket(io) {
         socket.on('start game', async () => {
             console.log('start game')            
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
-            room.startLink = await Utilities.getRandomWikiLinks(1)
-            room.destinationLink = await Utilities.getRandomWikiLinks(1)
+            room.startLink = await Utilities.getRandomWikiLinks(1, 'edit_html')
+            room.destinationLink = await Utilities.getRandomWikiLinks(1, 'summary')
             io.to(room.roomName).emit('game started', room)
         })
 

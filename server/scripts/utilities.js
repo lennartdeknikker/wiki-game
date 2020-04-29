@@ -11,12 +11,12 @@ const Utilities = {
             ready: false
         }
     },
-    async getRandomWikiLinks(amount = 3) {
+    async getRandomWikiLinks(amount = 3, output) {
         let links = []
         for (let i = 0; i < amount; i++) {
             const response = await fetch('https://en.wikipedia.org/api/rest_v1/page/random/summary')
             const json = await response.json()
-            links.push(json.content_urls.desktop.page)
+            links.push(json.api_urls[output])
         }
         return links
     },

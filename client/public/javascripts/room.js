@@ -14,7 +14,14 @@ const readyButton = document.getElementById('ready-button')
 const userList = document.getElementById('user-list')
 const userNameElement = document.getElementById('username')
 const startButton = document.getElementById('start-button')
-const wikiEmbed = document.querySelector('#wiki-embed')
+const wikiDestinationEmbed = document.getElementById('wiki-destination-embed')
+const wikiEmbed = document.getElementById('wiki-embed')
+const clicksCounter = document.getElementById('clicks')
+const pagesElement = document.getElementById('pages')
+
+// variables
+let clicks = 0
+let clickedLinks = []
 
 // event listeners
 readyButton.addEventListener('click', readyButtonHandler)
@@ -60,31 +67,11 @@ socket.on('change in users', (roomData) => {
 })
 
 socket.on('game started', async (roomData) => {
-    console.log('start:', roomData.startLink)
-    console.log('destination:', roomData.destinationLink)
-    fetch(roomData.destinationLink)
-        .then(function(response) {
-        // When the page is loaded convert it to text
-            return response.text()
-        })
-        .then(function(html) {
-        // Initialize the DOM parser
-            var parser = new DOMParser()
-
-            // Parse the text
-            var doc = parser.parseFromString(html, 'text/html')
-
-            // You can now even select part of that html as you would in the regular DOM 
-            // Example:
-            // var docArticle = doc.querySelector('article').innerHTML;
-
-            console.log(doc)
-        })
-        .catch(function(err) {  
-            console.log('Failed to fetch page: ', err)  
-        })
-    
+    addDestination(roomData.destinationLink[0])
+    loadPage(roomData.startLink[0])
 })
+
+
 
 // DOM update functions
 function updateUserList(users) {
@@ -101,6 +88,54 @@ function updateUserList(users) {
             userNameElement.innerText = `${user.username} ${readyText}`
         }
     }
+}
+
+async function addDestination(link) {
+    const response = await fetch(link)
+    const json = await response.json()
+
+    const pageTitleElement = document.createElement('h4')
+    pageTitleElement.innerText = json.title
+    const extractElement = document.createElement('p')
+    extractElement.innerText = json.extract
+    
+    wikiDestinationEmbed.appendChild(pageTitleElement)
+    wikiDestinationEmbed.appendChild(extractElement)
+}
+
+async function loadPage(link) {
+    console.log(link)
+    
+    const response = await fetch(link)
+    const html = await response.text()
+    wikiEmbed.innerHTML = html
+    updateLinks('#wiki-embed')    
+}
+
+function updateLinks(elementName) {
+    const element = document.querySelector(elementName)
+    const links = element.querySelectorAll('a')
+    links.forEach(link => {
+        if (!isInternalLink(link)) {
+            link.classList.add('external-link')
+            link.addEventListener('click', onFalseLink)
+        } else {
+            link.addEventListener('click', onWikiLink)
+        }
+    })
+
+    function onFalseLink() {
+        event.preventDefault()
+    }
+
+    function onWikiLink() {
+        event.preventDefault()
+        increaseClicks()
+        addToPageArray(this.href)
+        loadPage(parseToApiLink(this.href))
+        socket.emit('wiki link clicked', this.href)
+    }
+
 }
 
 // checker functions
@@ -120,16 +155,28 @@ function isAdmin(users) {
     return admin.id === socket.id
 }
 
+function isInternalLink(linkElement) {
+    return linkElement.href.includes('wiki')
+}
 
+// helper functions
+function parseToApiLink(link) {
+    const subject = link.replace('http://en.wikipedia.org/wiki/', '')
+    let newLink = `https://en.wikipedia.org/api/rest_v1/page/html/${subject}`
+    return newLink    
+}
 
-// if (wikiEmbed) {
-//     const links = wikiEmbed.querySelectorAll('a')
-//     links.forEach(link => {
-//         link.addEventListener('click', onWikiLink)
-//     })
-// }
+function increaseClicks() {
+    clicks++
+    clicksCounter.innerText = clicks
+}
 
-// function onWikiLink() {
-//     event.preventDefault()
-//     socket.emit('wiki link clicked', this.href)
-// }
+function addToPageArray(link) {
+    const subject = link.replace('http://en.wikipedia.org/wiki/', '')
+    clickedLinks.push(subject)
+    let breadCrumbs = ''
+    for (link in clickedLinks) {
+        breadCrumbs += `${clickedLinks[link]} >`
+    }
+    pagesElement.innerText = breadCrumbs
+}
