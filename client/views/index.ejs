@@ -31,12 +31,13 @@
             placeholder="your name"
             name="user"
           />
-          <input
-            type="text"
-            id="existing-room-name"
-            placeholder="room name"
-            name="room"
-          />
+          <select name="room" id="select-room">
+            <% rooms.forEach(room => { %>
+            <option value="<%= room.roomName %>"
+              ><%= room.roomName %> (<%= room.userTotal %> player)</option
+            >
+            <% }) %>
+          </select>
           <input type="submit" value="let's go!" />
         </fieldset>
       </form>

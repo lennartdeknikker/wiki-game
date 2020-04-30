@@ -1,7 +1,8 @@
 const Utilities = require('./utilities')
+const States = require('./states')
 
 function socket(io) {
-    const availableRooms = []
+    let availableRooms = States.availableRooms
 
     io.on('connection', function(socket){
         console.log('a user connected')
