@@ -19,6 +19,9 @@ const wikiEmbed = document.getElementById('wiki-embed')
 const clicksCounter = document.getElementById('clicks')
 const pagesList = document.getElementById('pages')
 const playersProgressList = document.getElementById('players-progress-list')
+const winnersList = document.getElementById('winners-list')
+const losersList = document.getElementById('losers-list')
+const startOverButton = document.getElementById('start-over-button')
 
 // variables
 let clicks = 0
@@ -27,6 +30,7 @@ let clickedLinksArray = []
 // event listeners
 readyButton.addEventListener('click', readyButtonHandler)
 startButton.addEventListener('click', startButtonHandler)
+startOverButton.addEventListener('click', startOverButtonHandler)
 
 //event handlers
 function readyButtonHandler() {
@@ -47,6 +51,9 @@ function startButtonHandler() {
     }
 }
 
+function startOverButtonHandler() {
+    window.location.reload()
+}
 
 // socket events
 socket.on('change in users', (roomData) => {
@@ -87,6 +94,32 @@ socket.on('a user clicked', roomData => {
         newLi.innerText = `${roomData.users[user].username}: ${roomData.users[user].clicks} clicks ${finishedText}`
         playersProgressList.appendChild(newLi)
     }    
+})
+
+socket.on('game ended', roomData => {
+    let winners = []
+    let losers = []
+
+    roomData.users.forEach(user => {
+        let scoreForUser = {
+            userName: user.userName,
+            clicks: user.clicks
+        }
+        user.finished ? winners.push(scoreForUser) : losers.push(scoreForUser)
+    })
+
+    winners.sort((a, b) => a.clicks - b.clicks)
+
+    for (let winner of winners) {
+        let newLi = document.createElement('li')
+        newLi.innerText = `${winner.userName} finished in ${winner.clicks} clicks`
+        winnersList.appendChild(newLi)
+    }
+    for (let loser of losers) {
+        let newLi = document.createElement('li')
+        newLi.innerText = loser.userName
+        losersList.appendChild(newLi)
+    }
 })
 
 

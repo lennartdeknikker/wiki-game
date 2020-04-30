@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <% include ./partials/head.ejs %>
   <body>
     <h1>wiki-game</h1>
+    <p>
+      This game tries to find out what European countries are easier to find on
+      wikipedia. By playing this game, the amount of clicks you need to get to
+      the desired destination is saved to visualize what countries are easiest
+      to reach.
+    </p>
+    <a href="/results">Check out the results here</a>
     <section>
       <form action="/new" method="GET" id="form-new-game">
         <fieldset>

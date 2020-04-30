@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <% include ./partials/head.ejs %>
   <body>
     <header>
@@ -32,6 +32,13 @@
       <ul id="pages" class="clicked-pages-list"></ul>
       <h4>Clicks: <span id="clicks">0</span></h4>
       <article id="wiki-embed"></article>
+    </section>
+    <section>
+      <h3>Winners</h3>
+      <ol id="winners-list"></ol>
+      <h3>Losers</h3>
+      <ol id="losers-list"></ol>
+      <button id="start-over-button">start over</button>
     </section>
 
     <script src="/socket.io/socket.io.js"></script>
