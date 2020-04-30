@@ -26,7 +26,8 @@ const Utilities = {
             userTotal: 0,
             users: [],
             startLink: '',
-            destinationLink: ''
+            destinationLink: '',
+            status: 'waiting for players'
         }
 
         // newRoom.destinationLinks = await Utilities.getRandomWikiLinks(1)

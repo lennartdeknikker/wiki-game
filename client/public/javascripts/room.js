@@ -111,6 +111,8 @@ function updateUserList(users) {
 async function addDestination(link) {
     const response = await fetch(link)
     const json = await response.json()
+    console.log(json)
+    
 
     const pageTitleElement = document.createElement('h4')
     pageTitleElement.innerText = json.title
@@ -151,7 +153,7 @@ function updateLinks(elementName) {
         increaseClicks()
         addToPageArray(this.href)
         loadPage(parseToApiLink(this.href))
-        
+
         socket.emit('wiki link clicked', this.href)
     }
 
@@ -180,7 +182,8 @@ function isInternalLink(linkElement) {
 
 // helper functions
 function parseToApiLink(link) {
-    const subject = link.replace('http://en.wikipedia.org/wiki/', '')
+    const httpslink = link.replace('http', 'https')
+    const subject = httpslink.replace('https://en.wikipedia.org/wiki/', '')
     let newLink = `https://en.wikipedia.org/api/rest_v1/page/html/${subject}`
     return newLink    
 }

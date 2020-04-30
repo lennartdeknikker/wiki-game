@@ -59,6 +59,7 @@ function socket(io) {
         socket.on('start game', async () => {
             console.log('start game')            
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
+            room.status = 'playing'
             room.startLink = await Utilities.getRandomWikiLinks(1, 'edit_html')
             room.destinationLink = await Utilities.getRandomWikiLinks(1, 'summary')
             io.to(room.roomName).emit('game started', room)
@@ -68,7 +69,7 @@ function socket(io) {
             console.log('wiki link clicked', link)
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
             const destinationSubject = room.destinationLink[0].replace('https://en.wikipedia.org/api/rest_v1/page/summary/', '')
-            const clickedSubject = link.replace('http://en.wikipedia.org/wiki/', '')
+            const clickedSubject = link.replace('https://en.wikipedia.org/wiki/', '')
             if (clickedSubject === destinationSubject) {
                 Utilities.setUserProperty(socket.id, availableRooms, 'finished', true, io)
                 if (Utilities.checkIfEveryoneIsFinished(socket.id, availableRooms)) {
