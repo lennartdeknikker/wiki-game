@@ -22,6 +22,8 @@
           <input type="submit" value="let's go!" />
         </fieldset>
       </form>
+      <% if (rooms.length > 0) { %>
+
       <form action="/join" method="GET" id="form-join-game">
         <fieldset>
           <legend>Join an existing game</legend>
@@ -41,6 +43,7 @@
           <input type="submit" value="let's go!" />
         </fieldset>
       </form>
+      <% } %>
     </section>
     <script src="/javascripts/index.js"></script>
   </body>

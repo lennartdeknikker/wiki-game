@@ -4,11 +4,20 @@ const States = require('../scripts/states')
 
 /* GET home page. */
 router.get('/', async function(req, res) {
-    const availableRooms = []
+    let availableRooms = []
+
+    // filter for rooms that are still open and only save their name and amount of users in availableRooms
     States.availableRooms.forEach(room => {
-        if (room.status === 'waiting for players') availableRooms.push(room)
+        if (room.status === 'waiting for players') {
+            const availableRoom = {
+                roomName: room.roomName,
+                userTotal: room.userTotal
+            }
+            availableRooms.push(availableRoom)
+        }
     })
     
+    // render the index page.
     res.render('index', { title: 'wiki-game', rooms: availableRooms })
 })
 
