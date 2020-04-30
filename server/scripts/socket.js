@@ -68,8 +68,6 @@ function socket(io) {
             io.to(room.roomName).emit('game started', room)
         })
 
-        Database.addNewData(120, 120)
-
         socket.on('wiki link clicked', link => {
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
             const destinationSubject = room.destination.link.replace('https://en.wikipedia.org/api/rest_v1/page/summary/', '')
