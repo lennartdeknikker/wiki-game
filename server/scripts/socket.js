@@ -1,5 +1,6 @@
 const Utilities = require('./utilities')
 const States = require('./states')
+const Database = require('./database')
 
 function socket(io) {
     let availableRooms = States.availableRooms
@@ -62,24 +63,37 @@ function socket(io) {
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
             room.status = 'playing'
             room.startLink = await Utilities.getRandomWikiLinks(1, 'edit_html')
-            room.destinationLink = await Utilities.getDestinationLinks(1)
+            room.destination = Utilities.getDestination()
+            
             io.to(room.roomName).emit('game started', room)
         })
 
         socket.on('wiki link clicked', link => {
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
-            const destinationSubject = room.destinationLink[0].replace('https://en.wikipedia.org/api/rest_v1/page/summary/', '')
+            const destinationSubject = room.destination.link.replace('https://en.wikipedia.org/api/rest_v1/page/summary/', '')
             const httpsSubject = link.replace('http', 'https')
-            const clickedSubject = httpsSubject.replace('https://en.wikipedia.org/wiki/', '')
-            console.log(destinationSubject)
-            console.log(clickedSubject)
-            
+            const clickedSubject = httpsSubject.replace('https://en.wikipedia.org/wiki/', '')            
             
             if (clickedSubject === destinationSubject) {
                 Utilities.setUserProperty(socket.id, availableRooms, 'finished', true, io)
                 if (Utilities.checkIfEveryoneIsFinished(socket.id, availableRooms)) {
                     console.log('we have a winner')
-                    
+                    // get room
+                    const room = Utilities.getRoomByUserId(socket.id)
+                    // set room status to 'game ended'
+                    room.status = 'game ended'
+                    // emit end event to sockets
+                    io.to(room.roomName).emit('game ended', room)
+                    // get relevant data
+                    let destinationCountry = room.destination.name
+                    let clicksForFinishedUsersInThisGame = []
+                    room.users.forEach(user => {
+                        if (user.finished === true) {
+                            clicksForFinishedUsersInThisGame.push(user.clicks)
+                        }
+                    })
+                    // save data to database
+                    Database.addNewData(destinationCountry, clicksForFinishedUsersInThisGame)
                 }
             }
             

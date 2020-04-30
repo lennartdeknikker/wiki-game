@@ -74,7 +74,7 @@ socket.on('game started', async (roomData) => {
     const sections = document.querySelectorAll('section')
     sections[0].classList.add('hidden')
     sections[1].classList.add('hidden')
-    addDestination(roomData.destinationLink[0])
+    addDestination(roomData.destination.link)
     loadPage(roomData.startLink[0])
 })
 
@@ -88,6 +88,7 @@ socket.on('a user clicked', roomData => {
         playersProgressList.appendChild(newLi)
     }    
 })
+
 
 
 

@@ -21,16 +21,15 @@ const Utilities = {
         }
         return links
     },
-    getDestinationLinks(amount = 3) {
-        let links = []
-        for (let i = 0; i < amount; i++) {
-            const endpoint = 'https://en.wikipedia.org/api/rest_v1/page/summary/'
-            const randomIndex = Math.floor(Math.random() * Destinations.length)
-            const randomDestination = Destinations[randomIndex]
-
-            links.push(endpoint + randomDestination.link)
+    getDestination() {
+        const endpoint = 'https://en.wikipedia.org/api/rest_v1/page/summary/'
+        const randomIndex = Math.floor(Math.random() * Destinations.length)
+        const randomDestination = Destinations[randomIndex]
+        
+        return {
+            name: randomDestination.name,
+            link: endpoint + randomDestination.link
         }
-        return links
     },
     async createRoom(roomName) {
         let newRoom = {
@@ -38,7 +37,10 @@ const Utilities = {
             userTotal: 0,
             users: [],
             startLink: '',
-            destinationLink: '',
+            destination: {
+                name: '',
+                link: ''
+            },
             status: 'waiting for players'
         }
         return newRoom
