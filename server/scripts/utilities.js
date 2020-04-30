@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const Destinations = require('./destinations')
 
 const Utilities = {
     createUser(username, id, isAdmin) {
@@ -20,6 +21,17 @@ const Utilities = {
         }
         return links
     },
+    getDestinationLinks(amount = 3) {
+        let links = []
+        for (let i = 0; i < amount; i++) {
+            const endpoint = 'https://en.wikipedia.org/api/rest_v1/page/summary/'
+            const randomIndex = Math.floor(Math.random() * Destinations.length)
+            const randomDestination = Destinations[randomIndex]
+
+            links.push(endpoint + randomDestination.link)
+        }
+        return links
+    },
     async createRoom(roomName) {
         let newRoom = {
             roomName: roomName,
@@ -29,9 +41,6 @@ const Utilities = {
             destinationLink: '',
             status: 'waiting for players'
         }
-
-        // newRoom.destinationLinks = await Utilities.getRandomWikiLinks(1)
-        // newRoom.startLinks = await Utilities.getRandomWikiLinks(1)
         return newRoom
     },
     getRoomData(roomName, roomsFile) {
@@ -50,11 +59,13 @@ const Utilities = {
         return result
     },
     setUserProperty(id, roomsFile, property, newValue, io) {
+        let newRoomdata = []
         roomsFile.forEach(room => {
             room.users.forEach(user => {
                 if (user.id === id) {
-                    newValue === 'increment' ? user[property] = user[property] + 1 : user[property] = newValue                    
-                    io.to(room.roomName).emit('change in users', Utilities.getRoomData(room.roomName, roomsFile))
+                    newValue === 'increment' ? user[property] = user[property] + 1 : user[property] = newValue
+                    newRoomdata = Utilities.getRoomData(room.roomName, roomsFile)                    
+                    io.to(room.roomName).emit('change in users', newRoomdata)
                 }
             })
         })
