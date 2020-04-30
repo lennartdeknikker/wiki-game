@@ -3,7 +3,14 @@
   <% include ./partials/head.ejs %>
   <body>
     <h1>Results</h1>
-
+    <ol>
+      <% results.forEach(result => { %>
+      <li>
+        <%= result.country %> is reached in <%= result.averageAmountOfClicks %>
+        clicks. This is based on <%= result.timesPlayed %> game endings
+      </li>
+      <% }) %>
+    </ol>
     <script src="/javascripts/results.js"></script>
   </body>
 </html>

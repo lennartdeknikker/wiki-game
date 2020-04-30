@@ -33,6 +33,16 @@ const Database = {
         })
         return oldScores
     },
+    async getCurrentScores(callback) {
+        mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+        const db = mongoose.connection
+
+        db.on('error', console.error.bind(console, 'connection error:'))
+        db.once('open', async function() {
+            const currentScores = await Database.getOldScores()
+            callback(currentScores.scores)
+        })
+    },
     async updateScores(newScoresValue) {
         const query = { name: 'totalArray' }
         const change = { scores: newScoresValue }
