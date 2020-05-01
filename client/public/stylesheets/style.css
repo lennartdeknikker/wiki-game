@@ -290,6 +290,8 @@ footer a:visited {
 
 fieldset {
   border: 1px solid var(--header-color);
+  display: flex;
+  flex-direction: column;
 }
 
 input[type="text"],
@@ -311,4 +313,17 @@ input::placeholder {
 
 legend {
   font-weight: bold;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form:first-of-type {
+  margin-bottom: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
 }
