@@ -20,13 +20,15 @@ const wikiEmbed = document.getElementById('wiki-embed')
 const clicksCounter = document.getElementById('clicks')
 const pagesList = document.getElementById('pages')
 const playersProgressList = document.getElementById('players-progress-list')
-const winnersList = document.getElementById('winners-list')
-const losersList = document.getElementById('losers-list')
+// const winnersList = document.getElementById('winners-list')
+// const losersList = document.getElementById('losers-list')
 const startOverButton = document.getElementById('start-over-button')
 const preGameSection = document.getElementById('pre-game-section')
 const gameSection = document.getElementById('game-section')
 const postGameSection = document.getElementById('post-game-section')
 const wikiArticle = document.getElementById('wiki-article')
+const winnerText = document.getElementById('winner-text')
+const resultsLink = document.getElementById('results-link')
 
 // variables
 let clicks = 0
@@ -109,30 +111,34 @@ socket.on('game ended', roomData => {
     console.log('game ended')
     makeVisible(gameSection, false)
     makeVisible(postGameSection, true)
+    if (socket.id === roomData.winner.id) {
+        winnerText.innerText = 'Congrats! You won this game!'
+    } else  winnerText.innerText = `Too slow! ${roomData.winner.username} won the game!`
+    updateResultsLink()
     
-    let winners = []
-    let losers = []
+    // let winners = []
+    // let losers = []
 
-    roomData.users.forEach(user => {
-        let scoreForUser = {
-            userName: user.username,
-            clicks: user.clicks
-        }
-        user.finished ? winners.push(scoreForUser) : losers.push(scoreForUser)
-    })
+    // roomData.users.forEach(user => {
+    //     let scoreForUser = {
+    //         userName: user.username,
+    //         clicks: user.clicks
+    //     }
+    //     user.finished ? winners.push(scoreForUser) : losers.push(scoreForUser)
+    // })
 
-    winners.sort((a, b) => a.clicks - b.clicks)
+    // winners.sort((a, b) => a.clicks - b.clicks)
 
-    for (let winner of winners) {
-        let newLi = document.createElement('li')
-        newLi.innerText = `${winner.userName} finished in ${winner.clicks} clicks`
-        winnersList.appendChild(newLi)
-    }
-    for (let loser of losers) {
-        let newLi = document.createElement('li')
-        newLi.innerText = loser.userName
-        losersList.appendChild(newLi)
-    }
+    // for (let winner of winners) {
+    //     let newLi = document.createElement('li')
+    //     newLi.innerText = `${winner.userName} finished in ${winner.clicks} clicks`
+    //     winnersList.appendChild(newLi)
+    // }
+    // for (let loser of losers) {
+    //     let newLi = document.createElement('li')
+    //     newLi.innerText = loser.userName
+    //     losersList.appendChild(newLi)
+    // }
 })
 
 
@@ -193,12 +199,13 @@ async function loadPage(link) {
     const response = await fetch(link)
     const html = await response.text()
     wikiEmbed.innerHTML = html
-    updateLinks('#wiki-embed')    
+    // updateLinks('#wiki-embed')    
 }
 
 function updateLinks(elementName) {
     const element = document.querySelector(elementName)
     const links = element.querySelectorAll('a')
+
     links.forEach(link => {
         if (!isInternalLink(link)) {
             link.classList.add('external-link')
@@ -246,6 +253,12 @@ function isInternalLink(linkElement) {
 }
 
 // helper functions
+function updateResultsLink() {
+    const stringVariable = window.location.href
+    let baseUrl = stringVariable.substring(0, stringVariable.lastIndexOf('/'))
+    resultsLink.href = baseUrl + '/results'    
+}
+
 function parseToApiLink(link) {
     const httpslink = link.replace('http', 'https')
     const subject = httpslink.replace('https://en.wikipedia.org/wiki/', '')

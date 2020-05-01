@@ -2,19 +2,15 @@
 <html lang="en">
   <% include ./partials/head.ejs %>
   <body>
-    <h1>wiki-game</h1>
-    <p>
-      This game tries to find out what European countries are easier to find on
-      wikipedia. By playing this game, the amount of clicks you need to get to
-      the desired destination is saved to visualize what countries are easiest
-      to reach. The goal of this game is to get to the destination by clicking
-      the least amount of links possible. Below, you can see your destination
-      and the current scores for all players in this room. Below that you see
-      the browser to try and find your way to your destination on wikipedia. The
-      starting page is randomly generated.
-    </p>
-    <a href="/results">Check out the results here</a>
-    <section>
+    <header>
+      <h1>Wikipedia European Countries Game</h1>
+    </header>
+
+    <section id="introduction-section">
+      <p>
+        The goal of this game is to get from a random wikipedia page to a
+        randomly selected European country before one of the other players does.
+      </p>
       <form action="/new" method="GET" id="form-new-game">
         <fieldset>
           <legend>Start a new game</legend>
@@ -55,6 +51,15 @@
         </fieldset>
       </form>
       <% } %>
+    </section>
+    <section id="introduction-results-section">
+      <p>
+        When you get to your destination article, the amount of clicks is saved
+        to calculate the average amount of clicks to get there. Check out the
+        results page to find out which countries are easiest to reach based on
+        that saved data.
+      </p>
+      <a href="/results"><button>Results</button></a>
     </section>
     <script src="/javascripts/index.js"></script>
   </body>

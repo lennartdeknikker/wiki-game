@@ -41,7 +41,8 @@ const Utilities = {
                 name: '',
                 link: ''
             },
-            status: 'waiting for players'
+            status: 'waiting for players',
+            winner: {}
         }
         return newRoom
     },

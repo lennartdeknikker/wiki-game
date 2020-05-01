@@ -76,25 +76,24 @@ function socket(io) {
             
             if (clickedSubject === destinationSubject) {
                 Utilities.setUserProperty(socket.id, availableRooms, 'finished', true, io)
-                if (Utilities.checkIfEveryoneIsFinished(socket.id, availableRooms)) {
-                    console.log('we have a winner')
-                    // get room
-                    const room = Utilities.getRoomByUserId(socket.id, availableRooms)
-                    // set room status to 'game ended'
-                    room.status = 'game ended'
-                    // emit end event to sockets
-                    io.to(room.roomName).emit('game ended', room)
-                    // get relevant data
-                    let destinationCountry = room.destination.name
-                    let clicksForFinishedUsersInThisGame = []
-                    room.users.forEach(user => {
-                        if (user.finished === true) {
-                            clicksForFinishedUsersInThisGame.push(user.clicks)
-                        }
-                    })
-                    // save data to database
-                    Database.addNewData(destinationCountry, clicksForFinishedUsersInThisGame)
-                }
+                console.log('we have a winner')                
+                // get room
+                const room = Utilities.getRoomByUserId(socket.id, availableRooms)
+                room.winner = room.users.find(user => user.id === socket.id)
+                // set room status to 'game ended'
+                room.status = 'game ended'
+                // emit end event to sockets
+                io.to(room.roomName).emit('game ended', room)
+                // get relevant data
+                let destinationCountry = room.destination.name
+                let clicksForFinishedUsersInThisGame = []
+                room.users.forEach(user => {
+                    if (user.finished === true) {
+                        clicksForFinishedUsersInThisGame.push(user.clicks)
+                    }
+                })
+                // save data to database
+                Database.addNewData(destinationCountry, clicksForFinishedUsersInThisGame)
             }
             
             Utilities.setUserProperty(socket.id, availableRooms, 'clicks', 'increment', io)            

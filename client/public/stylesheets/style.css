@@ -103,7 +103,8 @@ h3 {
 
 /* start button */
 
-button {
+button,
+input[type="submit"] {
   border: none;
   padding: 0.5rem;
   background-color: #ff7b00;
@@ -113,7 +114,8 @@ button {
   font-size: 1rem;
 }
 
-button:hover {
+button:hover,
+input[type="submit"]:hover {
   background-color: #974900;
 }
 
@@ -266,4 +268,44 @@ footer a {
 
 footer a:visited {
   color: white;
+}
+
+#introduction-section {
+  margin: 1rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  color: var(--header-color);
+}
+
+#introduction-results-section {
+  margin: 1rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: #b0e2eb;
+  color: var(--header-color);
+  border: 1px solid var(--header-color);
+}
+
+form {
+  border: ;
+}
+
+fieldset {
+  border: 1px solid var(--header-color);
+}
+
+input[type="text"],
+select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--header-color);
+  color: #ff7b00;
+}
+
+input::placeholder {
+  color: #ff7b00;
+}
+
+.wrong-input {
+  font-weight: bold;
 }

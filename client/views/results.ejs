@@ -2,14 +2,27 @@
 <html lang="en">
   <% include ./partials/head.ejs %>
   <body>
-    <h1>Results</h1>
+    <header>
+      <h1>Wikipedia European Countries Game</h1>
+      <h2>Results</h2>
+    </header>
     <ol>
-      <% results.forEach(result => { %>
-      <li>
-        <%= result.country %> is reached in <%= result.averageAmountOfClicks %>
-        clicks. This is based on <%= result.timesPlayed %> game endings
-      </li>
-      <% }) %>
+      <table>
+        <thead>
+          <th>Country</th>
+          <th>Avg. clicks</th>
+          <th>Times played</th>
+        </thead>
+        <tbody>
+          <% results.forEach(result => { %>
+          <tr>
+            <td><%= result.country %></td>
+            <td><%= result.averageAmountOfClicks %></td>
+            <td><%= result.timesPlayed %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
     </ol>
     <script src="/javascripts/results.js"></script>
   </body>
