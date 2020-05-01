@@ -35,13 +35,11 @@ startOverButton.addEventListener('click', startOverButtonHandler)
 
 //event handlers
 function readyButtonHandler() {
-    if (readyButton.innerText === 'not ready') {
-        socket.emit('ready', true)
-        readyButton.innerText = 'ready'
-    } else {
-        socket.emit('ready', false)
-        readyButton.innerText = 'not ready'
-    }
+    const ready = readyButton.dataset.ready === 'true'
+
+    socket.emit('ready', !ready)
+    this.innerText = ready ? 'Click here when you\'re ready' : 'Wait for the admin to start the game...'
+    readyButton.dataset.ready = !ready
 }
 
 function startButtonHandler() {
@@ -150,13 +148,10 @@ function updateUserList(users) {
         for (let user of users) {
             if (user.id !== socket.id) {
                 const newLi = document.createElement('li')
-                const readyText = user.ready || user.admin ? '(ready)' : '(not ready)'        
+                const readyText = user.admin ? '(admin)' : user.ready ? '(ready)' : '(not ready)'
                 newLi.innerText = `${user.username} ${readyText}`        
                 userList.appendChild(newLi)
-            } else {
-                const readyText = user.ready || user.admin ? '(ready)' : '(not ready)'
-                userNameElement.innerText = `${user.username} ${readyText}`
-            }
+            } 
         }
     }
 }
