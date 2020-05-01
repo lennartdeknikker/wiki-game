@@ -86,11 +86,13 @@ socket.on('game started', async (roomData) => {
 })
 
 socket.on('a user clicked', roomData => {
+    const finished = roomData.users[user].finished
+    if (finished) wikiEmbed.classList.add('hidden')
     playersProgressList.innerHTML = ''
     roomData.users.sort((a, b) => a.clicks - b.clicks)
     for (let user in roomData.users) {
         const newLi = document.createElement('li')
-        let finishedText = roomData.users[user].finished === true ? '(finished)' : '(not finished yet)'
+        let finishedText = finished === true ? '(finished)' : '(not finished yet)'
         newLi.innerText = `${roomData.users[user].username}: ${roomData.users[user].clicks} clicks ${finishedText}`
         playersProgressList.appendChild(newLi)
     }    
@@ -104,7 +106,7 @@ socket.on('game ended', roomData => {
 
     roomData.users.forEach(user => {
         let scoreForUser = {
-            userName: user.userName,
+            userName: user.username,
             clicks: user.clicks
         }
         user.finished ? winners.push(scoreForUser) : losers.push(scoreForUser)
