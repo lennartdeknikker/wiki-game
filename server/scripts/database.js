@@ -17,12 +17,8 @@ const Database = {
     },
     async onConnection(destinationFromGame, newClicksArray) {
         const oldScores = await Database.getOldScores()
-        console.log('old scores:', oldScores)
-
         const newScoresValue = Database.createNewScoresValue(oldScores, destinationFromGame, newClicksArray)
-
-        const newScores = await Database.updateScores(newScoresValue)
-        console.log('new scores', newScores)
+        await Database.updateScores(newScoresValue)
     },
     async getOldScores() {
         const query = { name: 'totalArray' }

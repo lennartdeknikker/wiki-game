@@ -23,6 +23,10 @@ const playersProgressList = document.getElementById('players-progress-list')
 const winnersList = document.getElementById('winners-list')
 const losersList = document.getElementById('losers-list')
 const startOverButton = document.getElementById('start-over-button')
+const preGameSection = document.getElementById('pre-game-section')
+const gameSection = document.getElementById('game-section')
+const postGameSection = document.getElementById('post-game-section')
+const wikiArticle = document.getElementById('wiki-article')
 
 // variables
 let clicks = 0
@@ -89,28 +93,22 @@ socket.on('game started', async (roomData) => {
     let userNameText = userNameElement.innerText.replace('(ready)', '')
     userNameElement.innerText = userNameText
 
-    const sections = document.querySelectorAll('section')
-    sections[0].classList.add('hidden')
-    sections[1].classList.add('hidden')
+    makeVisible(preGameSection, false)
+    makeVisible(gameSection, true)
     addDestination(roomData.destination.link)
     loadPage(roomData.startLink[0])
+    handleProgress(roomData)
+    addToPageArray(roomData.startLink[0])
 })
 
 socket.on('a user clicked', roomData => {
-    const finished = roomData.users[user].finished
-    if (finished) wikiEmbed.classList.add('hidden')
-    playersProgressList.innerHTML = ''
-    roomData.users.sort((a, b) => a.clicks - b.clicks)
-    for (let user in roomData.users) {
-        const newLi = document.createElement('li')
-        let finishedText = finished === true ? '(finished)' : '(not finished yet)'
-        newLi.innerText = `${roomData.users[user].username}: ${roomData.users[user].clicks} clicks ${finishedText}`
-        playersProgressList.appendChild(newLi)
-    }    
+    handleProgress(roomData)
 })
 
 socket.on('game ended', roomData => {
     console.log('game ended')
+    makeVisible(gameSection, false)
+    makeVisible(postGameSection, true)
     
     let winners = []
     let losers = []
@@ -159,6 +157,21 @@ function updateUserList(users) {
     }
 }
 
+function handleProgress(roomData) {
+    playersProgressList.innerHTML = ''
+    roomData.users.sort((a, b) => a.clicks - b.clicks)
+    for (let user in roomData.users) {
+        const finished = roomData.users[user].finished
+        if (roomData.users[user].id === socket.id && finished ) {
+            makeVisible(wikiEmbed, false)
+        }
+        const newLi = document.createElement('li')
+        let finishedText = finished === true ? '(finished)' : '(not finished yet)'
+        newLi.innerText = `${roomData.users[user].username}: ${roomData.users[user].clicks} clicks ${finishedText}`
+        playersProgressList.appendChild(newLi)
+    }    
+}
+
 function makeVisible(element, visible) {
     visible ? element.classList.remove('hidden') : element.classList.add('hidden')
 }
@@ -166,8 +179,6 @@ function makeVisible(element, visible) {
 async function addDestination(link) {
     const response = await fetch(link)
     const json = await response.json()
-    console.log(json)
-    
 
     const pageTitleElement = document.createElement('h4')
     pageTitleElement.innerText = json.title
@@ -179,8 +190,6 @@ async function addDestination(link) {
 }
 
 async function loadPage(link) {
-    console.log(link)
-    
     const response = await fetch(link)
     const html = await response.text()
     wikiEmbed.innerHTML = html
@@ -208,7 +217,7 @@ function updateLinks(elementName) {
         increaseClicks()
         addToPageArray(this.href)
         loadPage(parseToApiLink(this.href))
-        wikiEmbed.scrollIntoView({behavior: 'smooth', block: 'start'})
+        wikiArticle.scrollIntoView({behavior: 'smooth', block: 'start'})
 
         socket.emit('wiki link clicked', this.href)
     }
@@ -250,7 +259,11 @@ function increaseClicks() {
 }
 
 function addToPageArray(link) {
-    const subject = link.replace('http://en.wikipedia.org/wiki/', '')
+    console.log(link)
+    link = link.replace('https://en.wikipedia.org/api/rest_v1/page/html/', 'http://en.wikipedia.org/wiki/')
+    
+    let subject = link.replace('http://en.wikipedia.org/wiki/', '')
+    subject = subject.replace(/_/g, ' ')
     const newItem = {
         subject: subject,
         link: link,

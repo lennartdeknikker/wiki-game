@@ -10,8 +10,16 @@ body {
   font-family: var(--font-family);
 }
 
+main {
+  min-height: 80vh;
+}
+
 a {
   color: #00b7ff;
+}
+
+.hidden {
+  display: none;
 }
 
 /* HEADER */
@@ -25,6 +33,7 @@ header {
 header h1 {
   margin: 0;
   padding: 1rem 2rem;
+  color: white;
 }
 
 header h2 {
@@ -32,10 +41,22 @@ header h2 {
   padding: 1rem 2rem;
   background-color: #b0e2eb;
   color: var(--header-color);
-  /* border-bottom: 1px solid var(--header-color); */
 }
 
-/* PRE-GAME INFORMATION */
+.error-message {
+  padding: 1rem;
+}
+
+.error {
+  color: var(--header-color);
+  font-size: 1.2rem;
+}
+
+.error-link {
+  color: var(--header-color);
+}
+
+/* PRE-GAME SECTION */
 
 #other-players {
   padding: 2rem;
@@ -76,14 +97,13 @@ h3 {
   background-color: #b0e2eb;
   border-top: 1px solid var(--header-color);
   border-bottom: 1px solid var(--header-color);
-
+  margin-top: 1rem;
   padding: 1rem 2rem;
 }
 
 /* start button */
 
-.start-button,
-.ready-button {
+button {
   border: none;
   padding: 0.5rem;
   background-color: #ff7b00;
@@ -93,8 +113,7 @@ h3 {
   font-size: 1rem;
 }
 
-.start-button:hover,
-.ready-button:hover {
+button:hover {
   background-color: #974900;
 }
 
@@ -111,21 +130,106 @@ button:focus {
   outline: none;
 }
 
-#wiki-destination-embed,
+/* GAME SECTION */
+
+#game-section {
+  padding: 2rem;
+}
+
+.introduction {
+  max-width: 50rem;
+}
+
+#game-section h3 {
+  color: var(--header-color);
+}
+
+.game-section-top {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--header-color);
+  background-color: #b0e2eb;
+  margin-bottom: 1rem;
+}
+
+#destination-article {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+#wiki-destination-embed {
+  background-color: white;
+  padding: 1rem;
+}
+
+#progress-article {
+  width: 30%;
+  min-width: 20rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#progress-article ol {
+  margin-left: 2rem;
+  color: var(--header-color);
+}
+
+#wiki-article {
+  background-color: #b0e2eb;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--header-color);
+}
+
+#wiki-article h4 {
+  color: var(--header-color);
+}
+
+.clicked-pages-list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.clicked-pages-list li {
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+  border: 1px solid var(--header-color);
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: var(--header-color);
+}
+
+.clicked-pages-list li:hover {
+  background-color: var(--header-color);
+  color: white;
+}
+
+.clicked-pages-list li:last-of-type {
+  margin-right: 0;
+}
+
 #wiki-embed {
-  width: 80vw;
-  padding: 10px;
+  width: 100%;
+  padding: 1rem;
   background-color: white;
   color: black;
-  overflow: scroll;
+  box-sizing: border-box;
 }
 
-.user-list-self {
+#wiki-embed * {
+  color: black;
+}
+
+#wiki-embed a {
+  color: blue;
   font-weight: bold;
-}
-
-.hidden {
-  display: none;
+  text-decoration: none;
 }
 
 .external-link {
@@ -134,6 +238,32 @@ button:focus {
   text-decoration: none;
 }
 
-.clicked-pages-list li {
-  cursor: pointer;
+/* POST GAME SECTION */
+
+#post-game-section {
+  margin: 1rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: #b0e2eb;
+  color: var(--header-color);
+  border: 1px solid var(--header-color);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--header-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:visited {
+  color: white;
 }
