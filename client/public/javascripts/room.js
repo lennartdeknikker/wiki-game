@@ -260,9 +260,17 @@ function updateResultsLink() {
 }
 
 function parseToApiLink(link) {
+    console.log(link)
+    
     const httpslink = link.replace('http', 'https')
+    console.log(httpslink)
+    
     const subject = httpslink.replace('https://en.wikipedia.org/wiki/', '')
+    console.log(subject)
+    
     let newLink = `https://en.wikipedia.org/api/rest_v1/page/html/${subject}`
+    console.log(newLink)
+    
     return newLink    
 }
 
