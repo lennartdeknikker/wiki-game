@@ -79,7 +79,7 @@ function socket(io) {
                 if (Utilities.checkIfEveryoneIsFinished(socket.id, availableRooms)) {
                     console.log('we have a winner')
                     // get room
-                    const room = Utilities.getRoomByUserId(socket.id)
+                    const room = Utilities.getRoomByUserId(socket.id, availableRooms)
                     // set room status to 'game ended'
                     room.status = 'game ended'
                     // emit end event to sockets

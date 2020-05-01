@@ -97,6 +97,8 @@ socket.on('a user clicked', roomData => {
 })
 
 socket.on('game ended', roomData => {
+    console.log('game ended')
+    
     let winners = []
     let losers = []
 
