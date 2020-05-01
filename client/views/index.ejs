@@ -5,62 +5,65 @@
     <header>
       <h1>Wikipedia European Countries Game</h1>
     </header>
+    <main>
+      <section id="introduction-section">
+        <p>
+          The goal of this game is to get from a random wikipedia page to a
+          randomly selected European country before one of the other players
+          does.
+        </p>
+        <form action="/new" method="GET" id="form-new-game">
+          <fieldset>
+            <legend>Start a new game</legend>
+            <input
+              type="text"
+              id="user-name"
+              placeholder="your name"
+              name="user"
+            />
+            <input
+              type="text"
+              id="room-name"
+              placeholder="room name"
+              name="room"
+            />
+            <input type="submit" value="let's go!" />
+          </fieldset>
+        </form>
+        <% if (rooms.length > 0) { %>
 
-    <section id="introduction-section">
-      <p>
-        The goal of this game is to get from a random wikipedia page to a
-        randomly selected European country before one of the other players does.
-      </p>
-      <form action="/new" method="GET" id="form-new-game">
-        <fieldset>
-          <legend>Start a new game</legend>
-          <input
-            type="text"
-            id="user-name"
-            placeholder="your name"
-            name="user"
-          />
-          <input
-            type="text"
-            id="room-name"
-            placeholder="room name"
-            name="room"
-          />
-          <input type="submit" value="let's go!" />
-        </fieldset>
-      </form>
-      <% if (rooms.length > 0) { %>
-
-      <form action="/join" method="GET" id="form-join-game">
-        <fieldset>
-          <legend>Join an existing game</legend>
-          <input
-            type="text"
-            id="user-name"
-            placeholder="your name"
-            name="user"
-          />
-          <select name="room" id="select-room">
-            <% rooms.forEach(room => { %>
-            <option value="<%= room.roomName %>"
-              ><%= room.roomName %> (<%= room.userTotal %> player)</option
-            >
-            <% }) %>
-          </select>
-          <input type="submit" value="let's go!" />
-        </fieldset>
-      </form>
-      <% } %>
-    </section>
-    <section id="introduction-results-section">
-      <p>
-        When you get to your destination article, the amount of clicks is saved
-        to calculate the average amount of clicks to get there. Check out the
-        results page to find out which countries are easiest to reach based on
-        that saved data.
-      </p>
-      <a href="/results"><button>Results</button></a>
-    </section>
+        <form action="/join" method="GET" id="form-join-game">
+          <fieldset>
+            <legend>Join an existing game</legend>
+            <input
+              type="text"
+              id="user-name"
+              placeholder="your name"
+              name="user"
+            />
+            <select name="room" id="select-room">
+              <% rooms.forEach(room => { %>
+              <option value="<%= room.roomName %>"
+                ><%= room.roomName %> (<%= room.userTotal %> player)</option
+              >
+              <% }) %>
+            </select>
+            <input type="submit" value="let's go!" />
+          </fieldset>
+        </form>
+        <% } %>
+      </section>
+      <section id="introduction-results-section">
+        <p>
+          When you get to your destination article, the amount of clicks is
+          saved to calculate the average amount of clicks to get there. Check
+          out the results page to find out which countries are easiest to reach
+          based on that saved data.
+        </p>
+        <a href="/results"><button>Results</button></a>
+      </section>
+    </main>
+    <footer>created by <a href="https://lenn4rt.com/">lenn4RT</a></footer>
     <script src="/javascripts/index.js"></script>
   </body>
 </html>

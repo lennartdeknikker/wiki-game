@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
 a {
@@ -305,4 +305,3 @@ input::placeholder {
 .wrong-input {
   font-weight: bold;
 }
-
