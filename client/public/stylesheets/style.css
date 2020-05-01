@@ -155,7 +155,7 @@ button:focus {
 }
 
 #destination-article {
-  width: 70%;
+  width: 100%;
   box-sizing: border-box;
   padding: 1rem;
 }
@@ -163,11 +163,12 @@ button:focus {
 #wiki-destination-embed {
   background-color: white;
   padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #progress-article {
-  width: 30%;
-  min-width: 20rem;
+  width: 100%;
   padding: 1rem;
   box-sizing: border-box;
 }
@@ -222,6 +223,7 @@ button:focus {
   background-color: white;
   color: black;
   box-sizing: border-box;
+  overflow: scroll;
 }
 
 #wiki-embed * {
