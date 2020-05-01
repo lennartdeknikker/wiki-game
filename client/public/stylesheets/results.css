@@ -4,6 +4,7 @@ section {
   background-color: #b0e2eb;
   border: 1px solid var(--header-color);
   margin: 1rem;
+  overflow: auto;
 }
 
 table {
@@ -16,12 +17,10 @@ table {
 }
 
 th {
-  min-width: 10rem;
   width: 30%;
 }
 
 th:first-of-type {
-  min-width: 1rem;
   width: 10%;
 }
 
@@ -35,7 +34,6 @@ th:nth-of-type(2) {
   text-align: left;
   padding-left: 1rem;
   box-sizing: border-box;
-  min-width: 12rem;
 }
 
 td:nth-of-type(2) {
