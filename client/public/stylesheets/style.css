@@ -286,10 +286,6 @@ footer a:visited {
   border: 1px solid var(--header-color);
 }
 
-form {
-  border: ;
-}
-
 fieldset {
   border: 1px solid var(--header-color);
 }
@@ -309,3 +305,4 @@ input::placeholder {
 .wrong-input {
   font-weight: bold;
 }
+

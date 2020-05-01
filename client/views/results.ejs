@@ -6,7 +6,7 @@
       <h1>Wikipedia European Countries Game</h1>
       <h2>Results</h2>
     </header>
-    <ol>
+    <section>
       <table>
         <thead>
           <th>Country</th>
@@ -15,7 +15,7 @@
         </thead>
         <tbody>
           <% results.forEach(result => { %>
-          <tr>
+          <tr class="result-row">
             <td><%= result.country %></td>
             <td><%= result.averageAmountOfClicks %></td>
             <td><%= result.timesPlayed %></td>
@@ -23,7 +23,6 @@
           <% }) %>
         </tbody>
       </table>
-    </ol>
-    <script src="/javascripts/results.js"></script>
+    </section>
   </body>
 </html>
