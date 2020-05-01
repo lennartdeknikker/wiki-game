@@ -203,6 +203,8 @@ async function loadPage(link) {
 }
 
 function updateLinks(elementName) {
+    console.log('updating links')
+    
     const element = document.querySelector(elementName)
     const links = element.querySelectorAll('a')
 
@@ -222,8 +224,11 @@ function updateLinks(elementName) {
     function onWikiLink() {
         event.preventDefault()
         increaseClicks()
-        addToPageArray(this.href)
-        loadPage(parseToApiLink(this.href))
+        const link = this.href.replace('https://en.wikipedia.org/wiki/', '')
+        addToPageArray(link)
+        console.log(link)
+        
+        loadPage(parseToApiLink(link))
         wikiArticle.scrollIntoView({behavior: 'smooth', block: 'start'})
 
         socket.emit('wiki link clicked', this.href)
