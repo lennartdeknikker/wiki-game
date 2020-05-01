@@ -12,6 +12,7 @@ socket.emit('join', roomName, userName)
 // page elements
 const readyButton = document.getElementById('ready-button')
 const userList = document.getElementById('user-list')
+const otherPlayers = document.getElementById('other-players')
 const userNameElement = document.getElementById('username')
 const startButton = document.getElementById('start-button')
 const wikiDestinationEmbed = document.getElementById('wiki-destination-embed')
@@ -44,10 +45,10 @@ function readyButtonHandler() {
 }
 
 function startButtonHandler() {
-    if (startButton.dataset.ready) {
+    if (startButton.dataset.ready) {        
+        socket.emit('ready', true)
         socket.emit('start game')    
-        console.log('start game')
-        
+        console.log('start game')        
     }
 }
 
@@ -58,14 +59,24 @@ function startOverButtonHandler() {
 // socket events
 socket.on('change in users', (roomData) => {
     console.log('change in users')
+
+    // check if this user is admin
     const admin = isAdmin(roomData.users)
     
+    // update the user list
     updateUserList(roomData.users)
 
-    if (admin) startButton.classList.remove('hidden')
+    // if user is admin, show start button and hide ready button
+    if (admin) {
+        makeVisible(startButton, true)
+        makeVisible(readyButton, false)
+    } else {
+        makeVisible(startButton, false)
+        makeVisible(readyButton, true)
+    }
 
-    if (!admin) startButton.classList.add('hidden')
-    else if (everyoneReady(roomData.users)) {
+    // if user is admin and alone, or admin and everyone is ready, enable the start button
+    if ((admin && everyoneReady(roomData.users)) || (admin && roomData.users.length <= 1)) {
         startButton.dataset.ready = true
         startButton.classList.remove('inactive')
     } else {
@@ -132,18 +143,26 @@ socket.on('game ended', roomData => {
 // DOM update functions
 function updateUserList(users) {
     userList.innerHTML = ''
-    for (let user of users) {
-        if (user.id !== socket.id) {
-            const newLi = document.createElement('li')
-            const readyText = user.ready ? '(ready)' : '(not ready)'
-    
-            newLi.innerText = `${user.username} ${readyText}`        
-            userList.appendChild(newLi)
-        } else {
-            const readyText = user.ready ? '(ready)' : '(not ready)'
-            userNameElement.innerText = `${user.username} ${readyText}`
+    if (users.length <= 1) {
+        otherPlayers.classList.add('hidden')
+    } else {
+        otherPlayers.classList.remove('hidden')
+        for (let user of users) {
+            if (user.id !== socket.id) {
+                const newLi = document.createElement('li')
+                const readyText = user.ready || user.admin ? '(ready)' : '(not ready)'        
+                newLi.innerText = `${user.username} ${readyText}`        
+                userList.appendChild(newLi)
+            } else {
+                const readyText = user.ready || user.admin ? '(ready)' : '(not ready)'
+                userNameElement.innerText = `${user.username} ${readyText}`
+            }
         }
     }
+}
+
+function makeVisible(element, visible) {
+    visible ? element.classList.remove('hidden') : element.classList.add('hidden')
 }
 
 async function addDestination(link) {
@@ -191,6 +210,7 @@ function updateLinks(elementName) {
         increaseClicks()
         addToPageArray(this.href)
         loadPage(parseToApiLink(this.href))
+        wikiEmbed.scrollIntoView({behavior: 'smooth', block: 'start'})
 
         socket.emit('wiki link clicked', this.href)
     }
@@ -201,7 +221,7 @@ function updateLinks(elementName) {
 function everyoneReady(users) {
     let everyoneReady = true
     for (let user of users) {
-        if (user.ready === false) everyoneReady = false
+        if (user.ready === false && user.admin !== true) everyoneReady = false
     }
     console.log('everyone is ready', everyoneReady)
     return everyoneReady

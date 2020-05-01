@@ -3,20 +3,35 @@
   <% include ./partials/head.ejs %>
   <body>
     <header>
-      <h1><%= room %></h1>
-      <h2 id="username"><%= user %></h2>
+      <h1>Wikipedia European Countries Game</h1>
     </header>
-    <section>
-      <button id="ready-button">not ready</button>
-    </section>
+    <main>
+      <section id="room-information">
+        <article>
+          <h2>Room: <%= room %></h2>
+              Player: <span id="username"><%= user %></span>
+        </article>
+        <article id="other-players">
+          <h3>Other players</h3>
+          <ul id="user-list">
+            <li>
+            </li>
+          </ul>
+        </article>
+        
+        <button id="ready-button">not ready</button>
+        <button id="start-button" class="inactive" data-ready="false">
+          Start game
+        </button>
+        
+        
+      </section>
+    </main>
+    
 
     <section>
-      <h3>Other players</h3>
-      <ul id="user-list"></ul>
+      
 
-      <button id="start-button" class="inactive" data-ready="false">
-        Start game
-      </button>
     </section>
     <section>
       <h3>Players Progress</h3>
