@@ -1,24 +1,16 @@
-const formNewGame = document.querySelector('#form-new-game')
-const formJoinGame = document.querySelector('#form-join-game')
+const forms = document.querySelectorAll('form')
+forms.forEach(form => {
+    form.addEventListener('submit', () => validateForm(form))
+})
 
-if (formNewGame && formJoinGame) {
-    formNewGame.addEventListener('submit', onNewGame)
-    formJoinGame.addEventListener('submit', onJoinGame)
-}
-
-function onNewGame() {
-    if (validate(formNewGame)) {
-        console.log('starting new game')   
-    }
-}
-
-function onJoinGame() {
-    if (validate(formJoinGame)) {
-        console.log('joining game')    
-    }
+function validateForm(form) {
+    event.preventDefault()
+    if (validate(form)) form.submit()
 }
 
 function validate(form) {
+    console.log('validating')
+    
     const formElements = form.querySelectorAll('textarea, input')
     let allIsRight = true
     for (const element of formElements) {
