@@ -199,7 +199,7 @@ async function loadPage(link) {
     const response = await fetch(link)
     const html = await response.text()
     wikiEmbed.innerHTML = html
-    // updateLinks('#wiki-embed')    
+    updateLinks('#wiki-embed')    
 }
 
 function updateLinks(elementName) {
