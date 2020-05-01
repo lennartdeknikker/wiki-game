@@ -77,9 +77,11 @@ socket.on('change in users', (roomData) => {
     if ((admin && everyoneReady(roomData.users)) || (admin && roomData.users.length <= 1)) {
         startButton.dataset.ready = true
         startButton.classList.remove('inactive')
+        startButton.innerText = 'Start game'
     } else {
         startButton.dataset.ready = false
         startButton.classList.add('inactive')
+        startButton.innerText = 'Wait for all players to get ready...'
     }
 })
 
@@ -149,6 +151,7 @@ function updateUserList(users) {
             if (user.id !== socket.id) {
                 const newLi = document.createElement('li')
                 const readyText = user.admin ? '(admin)' : user.ready ? '(ready)' : '(not ready)'
+                if (user.admin || user.ready) newLi.classList.add('user-ready')
                 newLi.innerText = `${user.username} ${readyText}`        
                 userList.appendChild(newLi)
             } 
