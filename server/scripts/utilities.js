@@ -18,8 +18,6 @@ const Utilities = {
             const response = await fetch('https://en.wikipedia.org/api/rest_v1/page/random/summary')
             const json = await response.json()
             links.push(json.api_urls[output])
-            console.log(response)
-            
         }
         return links
     },
