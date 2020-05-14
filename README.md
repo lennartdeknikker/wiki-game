@@ -28,6 +28,7 @@ The main goal of this game is to get to a given destination as fast as possible.
       - [game started](#game-started)
       - [another user clicked a link](#another-user-clicked-a-link)
       - [game end](#game-end)
+  - [License](#license)
 
 ## Concept
 This game was inspired by the fact that it's impossible to travel right now due to the current Corona pandemic. By playing this game you can travel to different European countries by clicking page links. You will start at a random page and every time you find a way to get to your destination, the route and amount of clicks to get there will be saved in the database, so it's possible to map those and create a visualisation showing digital travel routes. At this stage, the results are just shown as raw data in a table.
@@ -49,6 +50,20 @@ This application saves the results to a mongo database. It can be used without s
 MONGO_URL=mongodb+srv://<username>:<password>@<database>.mongodb.net/database?retryWrites=true&w=majority        
 ```
 
+The data is saved in one long array with the data for all countries. I might split this up in multiple entries and seperate those datasets by country to decrease database traffic.
+
+```json
+{
+  "_id": { "_id": "...." },
+  "name": "totalArray",
+  "scores": [
+    { "country": "Albania", "averageAmountOfClicks": "0", "timesPlayed": "0" },
+    { "country": "Andorra", "averageAmountOfClicks": "0", "timesPlayed": "0" },
+    ...
+  ]
+}
+```
+
 ##  Features
 ### Current features
 - [x] Multiple rooms
@@ -64,6 +79,7 @@ MONGO_URL=mongodb+srv://<username>:<password>@<database>.mongodb.net/database?re
 
 ### Future features
 - [ ] A timer so more players can finish before the game ends
+- [ ] Seperate database entries per country
 - [ ] A more graphic visualisation of the results
 - [ ] Keeping track of scores when multiple games are played by the same contestants.
 - [ ] 'Hard mode' providing a random page for the destination as well.
@@ -145,6 +161,17 @@ Whenever a user disconnects, the server checks if there's any users left and if 
 
 ### Server to client events
 #### change in users
+Whenever a user joins or leaves, this event is emitted to connected clients so the users in the waiting room or in game are updated. 
+
 #### game started
+When this event is fired, the waiting room disappears, the game starts and all connected clients load the destination and wikipedia embed.
+
 #### another user clicked a link
+Whenever a user clicks a link, his progress is updated on all connected clients.
+
 #### game end
+When the game ends, the game closes, the winner is shown and a menu is revealed giving players the option to start over or view the leaderboard.
+
+
+## License
+These projects are licensed under the terms of the MIT license.
