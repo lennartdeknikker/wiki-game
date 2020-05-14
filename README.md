@@ -7,13 +7,16 @@ The main goal of this game is to get to a given destination as fast as possible.
 - [Wikipedia European Countries Game](#wikipedia-european-countries-game)
   - [Contents](#contents)
   - [Concept](#concept)
-  - [Installation](#installation)
-  - [Database](#database)
   - [Features](#features)
     - [Current features](#current-features)
     - [Future features](#future-features)
+  - [Installation](#installation)
   - [Data Lifecycle](#data-lifecycle)
   - [API](#api)
+    - [Endpoints](#endpoints)
+      - [Random Article](#random-article)
+      - [Page Content](#page-content)
+  - [Database](#database)
   - [Sockets & Events](#sockets--events)
     - [Users and rooms](#users-and-rooms)
       - [Room objects](#room-objects)
@@ -30,41 +33,12 @@ The main goal of this game is to get to a given destination as fast as possible.
       - [game started](#game-started)
       - [another user clicked a link](#another-user-clicked-a-link)
       - [game end](#game-end)
+  - [Dependencies](#dependencies)
+    - [Developer Dependencies](#developer-dependencies)
   - [License](#license)
 
 ## Concept
 This game was inspired by the fact that it's impossible to travel right now due to the current Corona pandemic. By playing this game you can travel to different European countries by clicking page links. You will start at a random page and every time you find a way to get to your destination, the route and amount of clicks to get there will be saved in the database, so it's possible to map those and create a visualisation showing digital travel routes. At this stage, the results are just shown as raw data in a table.
-
-## Installation
-
-To work on this project,
-1. First clone this repository with git clone `https://github.com/lennartdeknikker/wiki-game.git`.
-2. Install the necessary dependencies with `npm install`
-3. Use `npm run dev` to start nodemon and view changes in the browser.
-
-By default the application can be previewed at [localhost:3000](http://localhost:3000/). To change that port value, just add a `PORT` variable to your `.env` file.
-
-## Database
-This application saves the results to a mongo database. It can be used without saving results, but it's possible to connect your own database.
-1. Create a `.env` file in the root folder.
-2. Add a variable called `MONGO_URL` as shown below:
-```
-MONGO_URL=mongodb+srv://<username>:<password>@<database>.mongodb.net/database?retryWrites=true&w=majority        
-```
-
-The data is saved in one long array with the data for all countries. I might split this up in multiple entries and seperate those datasets by country to decrease database traffic.
-
-```json
-{
-  "_id": { "_id": "...." },
-  "name": "totalArray",
-  "scores": [
-    { "country": "Albania", "averageAmountOfClicks": "0", "timesPlayed": "0" },
-    { "country": "Andorra", "averageAmountOfClicks": "0", "timesPlayed": "0" },
-    ...
-  ]
-}
-```
 
 ##  Features
 ### Current features
@@ -87,14 +61,52 @@ The data is saved in one long array with the data for all countries. I might spl
 - [ ] 'Hard mode' providing a random page for the destination as well.
 - [ ] Keeping track of how many clicks it takes people to get to destinations and based on that save and move pages to a category of difficulty.
 
+## Installation
+
+To work on this project,
+1. First clone this repository with git clone `https://github.com/lennartdeknikker/wiki-game.git`.
+2. Install the necessary dependencies with `npm install`
+3. Use `npm run dev` to start nodemon and view changes in the browser.
+
+By default the application can be previewed at [localhost:3000](http://localhost:3000/). To change that port value, just add a `PORT` variable to your `.env` file.
+
 
 ## Data Lifecycle
 ![life cycle diagram](wiki-assets/data-lifecycle.png)
+
 
 ## API
 This application uses the [wikipedia API](https://www.mediawiki.org/wiki/API:Main_page). This API provides the server with a random page link for a wikipedia page. First off, the destination page would also be random, but later on I found out in most cases it's too hard to get to the more specific kinds of wikipedia pages.
 
 Another change I made was to only provide the players with links for the destination and starting point and fetch the actual page content client side. This seemed a good idea since the Wikipedia API would not allow me to do a lot of requests per second. Although their documentation says it allows for up to 200 requests per second I would get errors when doing multiple requests right after each other.
+
+### Endpoints
+#### Random Article
+https://en.wikipedia.org/api/rest_v1/page/random/summary
+#### Page Content
+https://en.wikipedia.org/api/rest_v1/page/summary/
+
+## Database
+This application saves the results to a mongo database. It can be used without saving results, but it's possible to connect your own database.
+1. Create a `.env` file in the root folder.
+2. Add a variable called `MONGO_URL` as shown below:
+```
+MONGO_URL=mongodb+srv://<username>:<password>@<database>.mongodb.net/database?retryWrites=true&w=majority        
+```
+
+The data is saved in one long array with the data for all countries. I might split this up in multiple entries and seperate those datasets by country to decrease database traffic.
+
+```json
+{
+  "_id": { "_id": "...." },
+  "name": "totalArray",
+  "scores": [
+    { "country": "Albania", "averageAmountOfClicks": "0", "timesPlayed": "0" },
+    { "country": "Andorra", "averageAmountOfClicks": "0", "timesPlayed": "0" },
+    ...
+  ]
+}
+```
 
 ## Sockets & Events
 This application uses [Socket.io](https://socket.io/) to handle all the different events and synchronize user actions and server events. This way player actions can effect the game for all players directly. Below all custom events that handle the logic for this game (also shown in the [Data Lifecycle Diagram](#data-lifecycle)) are explained.
@@ -174,6 +186,25 @@ Whenever a user clicks a link, his progress is updated on all connected clients.
 #### game end
 When the game ends, the game closes, the winner is shown and a menu is revealed giving players the option to start over or view the leaderboard.
 
+
+## Dependencies
+- cookie-parser: "~1.4.4",
+- debug: "~2.6.9",
+- dom-parser: "^0.1.6",
+- dotenv: "^8.2.0",
+- ejs: "~2.6.1",
+- express: "~4.16.1",
+- fs-extra: "^9.0.0",
+- http-errors: "~1.6.3",
+- mongoose: "^5.9.10",
+- morgan: "~1.9.1",
+- node-fetch: "^2.6.0",
+- query-selector: "^2.0.0",
+- socket.io: "^2.3.0"
+### Developer Dependencies
+- eslint: "^6.8.0",
+- nodemon: "^2.0.3"
+- 
 
 ## License
 These projects are licensed under the terms of the MIT license.
