@@ -1,6 +1,8 @@
 # Wikipedia European Countries Game
 The main goal of this game is to get to a given destination as fast as possible. All players in the same room get the same destination and the same starting page. They will then have to click on page links and find a way to that destination. The player that gets there the fastest wins. The game will then end for all players, but they can restart to keep playing.
 
+![Screenshot](wiki-assets/screenshot.png)
+
 ## Contents
 - [Wikipedia European Countries Game](#wikipedia-european-countries-game)
   - [Contents](#contents)
