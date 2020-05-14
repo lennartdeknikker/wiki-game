@@ -204,7 +204,6 @@ When the game ends, the game closes, the winner is shown and a menu is revealed 
 ### Developer Dependencies
 - eslint: "^6.8.0",
 - nodemon: "^2.0.3"
-- 
 
 ## License
 These projects are licensed under the terms of the MIT license.
