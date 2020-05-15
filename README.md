@@ -73,6 +73,7 @@ By default the application can be previewed at [localhost:3000](http://localhost
 
 ## Data Lifecycle
 Below you see the data lifecycle for this application. In the upper left you see all user actions. Besides that it also shows the relations between all components and all the socket events that are handled. This application uses the wikipedia API to get random wikipedia pages, a `.json` file listing all destinations and a database to store the average amount of clicks.
+
 ![life cycle diagram](wiki-assets/data-lifecycle.png)
 
 
