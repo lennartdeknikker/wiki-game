@@ -61,6 +61,7 @@ function socket(io) {
         socket.on('start game', async () => {
             console.log('start game')            
             const room = Utilities.getRoomByUserId(socket.id, availableRooms)
+            Utilities.resetRoom(room)
             room.status = 'playing'
             room.startLink = await Utilities.getRandomWikiLinks(1, 'edit_html')
             room.destination = Utilities.getDestination()
@@ -82,6 +83,8 @@ function socket(io) {
                 room.winner = room.users.find(user => user.id === socket.id)
                 // set room status to 'game ended'
                 room.status = 'game ended'
+                // open room for new players.
+                room.status = 'waiting for players'
                 // emit end event to sockets
                 io.to(room.roomName).emit('game ended', room)
                 // get relevant data

@@ -22,7 +22,6 @@ const pagesList = document.getElementById('pages')
 const playersProgressList = document.getElementById('players-progress-list')
 // const winnersList = document.getElementById('winners-list')
 // const losersList = document.getElementById('losers-list')
-const startOverButton = document.getElementById('start-over-button')
 const preGameSection = document.getElementById('pre-game-section')
 const gameSection = document.getElementById('game-section')
 const postGameSection = document.getElementById('post-game-section')
@@ -37,7 +36,6 @@ let clickedLinksArray = []
 // event listeners
 readyButton.addEventListener('click', readyButtonHandler)
 startButton.addEventListener('click', startButtonHandler)
-startOverButton.addEventListener('click', startOverButtonHandler)
 
 //event handlers
 function readyButtonHandler() {
@@ -56,10 +54,6 @@ function startButtonHandler() {
     }
 }
 
-function startOverButtonHandler() {
-    window.location.reload()
-}
-
 // socket events
 socket.on('change in users', (roomData) => {
     console.log('change in users')
@@ -72,11 +66,11 @@ socket.on('change in users', (roomData) => {
 
     // if user is admin, show start button and hide ready button
     if (admin) {
-        makeVisible(startButton, true)
+        makeVisible(startButton)
         makeVisible(readyButton, false)
     } else {
         makeVisible(startButton, false)
-        makeVisible(readyButton, true)
+        makeVisible(readyButton)
     }
 
     // if user is admin and alone, or admin and everyone is ready, enable the start button
@@ -94,9 +88,9 @@ socket.on('change in users', (roomData) => {
 socket.on('game started', async (roomData) => {
     let userNameText = userNameElement.innerText.replace('(ready)', '')
     userNameElement.innerText = userNameText
-
+    makeVisible(postGameSection, false)
     makeVisible(preGameSection, false)
-    makeVisible(gameSection, true)
+    makeVisible(gameSection)
     addDestination(roomData.destination.link)
     loadPage(roomData.startLink[0])
     handleProgress(roomData)
@@ -109,12 +103,16 @@ socket.on('a user clicked', roomData => {
 
 socket.on('game ended', roomData => {
     console.log('game ended')
+    clickedLinksArray = []
+    pagesList.innerHTML = ''
     makeVisible(gameSection, false)
-    makeVisible(postGameSection, true)
+    makeVisible(postGameSection)
     if (socket.id === roomData.winner.id) {
         winnerText.innerText = 'Congrats! You won this game!'
     } else  winnerText.innerText = `Too slow! ${roomData.winner.username} won the game!`
     updateResultsLink()
+    makeVisible(preGameSection)
+    readyButton.click()
     
     // let winners = []
     // let losers = []
@@ -168,9 +166,9 @@ function handleProgress(roomData) {
     roomData.users.sort((a, b) => a.clicks - b.clicks)
     for (let user in roomData.users) {
         const finished = roomData.users[user].finished
-        if (roomData.users[user].id === socket.id && finished ) {
-            makeVisible(wikiEmbed, false)
-        }
+        // if (roomData.users[user].id === socket.id && finished ) {
+        //     makeVisible(wikiEmbed, false)
+        // }
         const newLi = document.createElement('li')
         let finishedText = finished === true ? '(finished)' : '(not finished yet)'
         newLi.innerText = `${roomData.users[user].username}: ${roomData.users[user].clicks} clicks ${finishedText}`
@@ -178,19 +176,19 @@ function handleProgress(roomData) {
     }    
 }
 
-function makeVisible(element, visible) {
+function makeVisible(element, visible = true) {
     visible ? element.classList.remove('hidden') : element.classList.add('hidden')
 }
 
 async function addDestination(link) {
     const response = await fetch(link)
     const json = await response.json()
-
+    
+    wikiDestinationEmbed.innerHTML = ''
     const pageTitleElement = document.createElement('h4')
     pageTitleElement.innerText = json.title
     const extractElement = document.createElement('p')
     extractElement.innerText = json.extract
-    
     wikiDestinationEmbed.appendChild(pageTitleElement)
     wikiDestinationEmbed.appendChild(extractElement)
 }

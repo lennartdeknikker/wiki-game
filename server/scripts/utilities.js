@@ -80,6 +80,12 @@ const Utilities = {
             if (user.finished === false) everyoneFinished = false
         })
         return everyoneFinished
+    },
+    resetRoom(room) {        
+        room.users.forEach(user => {
+            user.clicks = 0
+            user.finished = false
+        })
     }
 }
 
