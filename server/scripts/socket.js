@@ -97,7 +97,7 @@ function socket(io) {
                 })
                 // save data to database
                 Database.addNewData(destinationCountry, clicksForFinishedUsersInThisGame)
-            }
+            } else socket.emit('load page', link)
             
             Utilities.setUserProperty(socket.id, availableRooms, 'clicks', 'increment', io)            
             io.to(room.roomName).emit('a user clicked', room)

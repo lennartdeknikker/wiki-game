@@ -101,6 +101,11 @@ socket.on('a user clicked', roomData => {
     handleProgress(roomData)
 })
 
+socket.on('load page', link => {    
+    const subject = link.replace('https://en.wikipedia.org/wiki/', '')
+    loadPage(parseToApiLink(subject))
+})
+
 socket.on('game ended', roomData => {
     console.log('game ended')
     clickedLinksArray = []
@@ -193,9 +198,13 @@ async function addDestination(link) {
     wikiDestinationEmbed.appendChild(extractElement)
 }
 
-async function loadPage(link) {
+async function loadPage(link) {    
+    addLoader(wikiEmbed)
+    console.log('fetching page')    
     const response = await fetch(link)
+    console.log('page fetched, now converting to text')    
     const html = await response.text()
+    console.log('text received')    
     wikiEmbed.innerHTML = html
     updateLinks('#wiki-embed')    
 }
@@ -225,11 +234,9 @@ function updateLinks(elementName) {
         const link = this.href.replace('https://en.wikipedia.org/wiki/', '')
         addToPageArray(link)
         console.log(link)
-        
-        loadPage(parseToApiLink(link))
+        socket.emit('wiki link clicked', this.href)
         wikiArticle.scrollIntoView({behavior: 'smooth', block: 'start'})
 
-        socket.emit('wiki link clicked', this.href)
     }
 
 }
@@ -256,6 +263,13 @@ function isInternalLink(linkElement) {
 }
 
 // helper functions
+function addLoader(element) {
+    element.innerHTML = ''
+    let loader = document.createElement('img')
+    loader.src = '/images/loader.png'
+    loader.classList.add('loader')
+    element.appendChild(loader)
+}
 function updateResultsLink() {
     const stringVariable = window.location.href
     let baseUrl = stringVariable.substring(0, stringVariable.lastIndexOf('/'))

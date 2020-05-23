@@ -224,6 +224,7 @@ button:focus {
   color: black;
   box-sizing: border-box;
   overflow: scroll;
+  min-height: 50vh;
 }
 
 #wiki-embed * {
@@ -326,4 +327,17 @@ input,
 select {
   width: 100%;
   box-sizing: border-box;
+}
+
+.loader {
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
